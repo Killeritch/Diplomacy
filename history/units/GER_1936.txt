@@ -433,6 +433,16 @@ units = {
 		start_equipment_factor = 0.3
 
 	}
+	
+	# danish #
+	division = {
+		name = "2. Jyske Division"
+		location = 11251  # Sonderborg
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
 
 
 	##### NAVAL UNITS #####
