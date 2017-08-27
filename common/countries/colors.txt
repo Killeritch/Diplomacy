@@ -5,20 +5,20 @@ GER = {
 	color_ui = rgb { 10 10 10 }
 }
 ENG = {
-	color = rgb { 251 63 139 }
-	color_ui = rgb { 251 63 139 }
+	color = rgb { 251 33 139 }
+	color_ui = rgb { 251 33 139 }
 }
 SOV = {
-	color = rgb { 98 2 138 }
-	color_ui = rgb { 98 2 138 }
+	color = rgb { 158 2 138 }
+	color_ui = rgb { 158 2 138 }
 }
 SWE = {
 	color = rgb { 36 132 247 }
 	color_ui = rgb { 47 172 255 }
 }
 FRA = {
-	color = rgb { 0 153 217 }
-	color_ui = rgb { 0 153 217 }
+	color = rgb { 0 153 255 }
+	color_ui = rgb { 0 153 255 }
 }
 LUX = {
 	color = rgb { 65 175 179 }
@@ -38,8 +38,8 @@ POL = {
 	color_ui = rgb { 255 120 138 }
 }
 AUS = {
-	color = rgb { 212 64 1 }
-	color_ui = rgb { 212 64 1 }
+	color = rgb { 162 54 1 }
+	color_ui = rgb { 162 54 1 }
 }
 LIT = {
 	color = rgb { 219 219 119 }
@@ -58,8 +58,8 @@ SPR = {
 	color_ui = rgb { 255 255 122 }
 }
 ITA = {
-	color = rgb { 6 129 64 }
-	color_ui = rgb { 6 129 64 }
+	color = rgb { 6 159 64 }
+	color_ui = rgb { 6 159 64 }
 }
 ROM = {
 	color = rgb { 215 196 72 }
@@ -74,8 +74,8 @@ SWI = {
 	color_ui = rgb { 193 81 81 }
 }
 TUR = {
-	color = rgb { 239 217 20 }
-	color_ui = rgb { 239 217 20 }
+	color = rgb { 255 227 0 }
+	color_ui = rgb { 255 227 20 }
 }
 GRE = {
 	color = rgb { 93 181 227 }
@@ -530,4 +530,18 @@ D14 = {
 D15 = {
 	color = rgb { 194 140 86 }
 	color_ui = rgb { 252 182 112 }
+}
+
+### DIPLOMACY MOD ###
+ALG = {
+	color = rgb { 13 140 13 }
+	color_ui = rgb { 13 140 13 }
+}
+MOR = {
+	color = rgb { 141 10 10 }
+	color_ui = rgb { 141 10 10 }
+}
+TUN = {
+	color = rgb { 210 15 15 }
+	color_ui = rgb { 210 15 15 }
 }
