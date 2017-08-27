@@ -7,28 +7,6 @@ bookmarks = {
 		default_country = "GER"
 		default = yes
 		
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				
-			}
-			focuses = {
-				FRA_initiate_government_reform
-				FRA_support_status_quo
-				FRA_revise_versailles
-			}
-		}
-		"AUS"={
-			history = "AUS_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				
-			}
-			focuses = {
-				
-			}
-		}
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -42,7 +20,18 @@ bookmarks = {
 				ENG_war_with_italy
 			}
 		}
-
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				FRA_initiate_government_reform
+				FRA_support_status_quo
+				FRA_revise_versailles
+			}
+		}
 		"GER"={
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = neutrality
@@ -67,15 +56,15 @@ bookmarks = {
 				ITA_italy_first
 			}		
 		}
-		"TUR"={
-			history = "TUR_GATHERING_STORM_DESC"
+		"AUS"={
+			history = "AUS_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				
-			}	
+			}
 			focuses = {
 				
-			}			
+			}
 		}
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
@@ -89,7 +78,16 @@ bookmarks = {
 				SOV_war_with_uk
 			}	
 		}
-
+		"TUR"={
+			history = "TUR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}	
+			focuses = {
+				
+			}			
+		}
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
 		}

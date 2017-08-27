@@ -357,52 +357,19 @@ units = {
 		division_template = "Divisione di Fanteria"		# CCNN militia, lower training and equipment
 		start_experience_factor = 0.2
 	}
+	
+	#Malta
+	division= {	
+		name = "Malta Command"
+		location = 12003
+		division_template = "Divisione Coloniale"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+
+	}
 
 
-	##### NAVAL UNITS #####
-	### 1st FLEET ###
-	navy = {					
-		name = "1a Squadra Navale"				
-		base = 11837
-		location = 11837 # Taranto		
-		ship = { name = "RM Zara" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ITA version_name = "Zara Class" } } }
-		ship = { name = "RM Gorizia" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ITA version_name = "Zara Class" } } }
-		ship = { name = "RM Fiume" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ITA version_name = "Zara Class" } } }
-		# 9a Squadriglia Cacciatorpedindiere
-		ship = { name = "RM Nicoloso da Recco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Emanuele Pessagno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Luca Tarigo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Antoniotto Usodimare" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-	}					
-	navy = {					
-		name = "4a Squadra Navale"				
-		base = 11837
-		location = 11837 # Taranto			
-		ship = { name = "RM Luigi Cadorna" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Giussano Class" } } }
-		ship = { name = "RM Armando Diaz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Giussano Class" } } }
-		ship = { name = "RM Alberico da Barbiano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Giussano Class" } } }
-		ship = { name = "RM Alberto da Giussano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Giussano Class" } } }
-		# 6a Squadriglia Cacciatorpedindiere
-		ship = { name = "RM Bettino Ricasoli" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-		ship = { name = "RM Giovanni Nicotera" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-	}					
-	navy = {					
-		name = "5a Squadra Navale"				
-		base = 11837
-		location = 11837 # Taranto			
-		ship = { name = "RM Caio Duilio" definition = battleship equipment = { battleship_1 = { amount = 1 owner = ITA } } }				
-		ship = { name = "RM Andrea Doria" definition = battleship equipment = { battleship_1 = { amount = 1 owner = ITA } } }				
-		# 7a Squadriglia Cacciatorpedindiere
-		ship = { name = "RM Dardo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Freccia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Saetta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Strale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		# 8a Squadriglia Cacciatorpedindiere
-		ship = { name = "RM Baleno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Folgore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Fulmine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Lampo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-	}				
+	##### NAVAL UNITS #####			
 	### 2nd FLEET ###
 	navy = {					
 		name = "2a Squadra Navale"				
@@ -447,34 +414,7 @@ units = {
 		ship = { name = "RM Emanuele Filiberto Duca d'Aosta" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Montecuccoli Class" } } }
 		ship = { name = "RM Muzio Attendolo" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Montecuccoli Class" } } }
 		ship = { name = "RM Raimondo Montecuccoli" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Montecuccoli Class" } } }
-	}
-					
-	navy = {					
-		name = "Squadra di Taranto"				
-		base = 11837
-		location = 11837 # Taranto				
-		ship = { name = "RM San Giorgio" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ITA } } }				
-		ship = { name = "RM Taranto" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA } } }				
-		ship = { name = "RM Bari" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA } } }				
-		# 2a Squadriglia Cacciatorpedindiere
-		ship = { name = "RM Espero" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Borea" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Zeffiro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Ostro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		# 6a Squadriglia Torpedindiere
-		ship = { name = "RM Rosolino Pilo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-		ship = { name = "RM Giuseppe Missori" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-		ship = { name = "RM Francesco Stocco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-		ship = { name = "RM Giuseppe Sirtori" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-		# 7a Squadriglia Torpedindiere
-		ship = { name = "RM Angelo Bassini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-		ship = { name = "RM Enrico Cosenz" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-		ship = { name = "RM Giacomo Medici" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-		ship = { name = "RM Nicola Fabrizi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-		# Squadriglia Cacciatorpedindiere di Taranto
-		ship = { name = "RM Carlo Mirabello" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-		ship = { name = "RM Augusto Riboty" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-	}					
+	}		
 	navy = {					
 		name = "Comando Navale Napoli"				
 		base = 819
@@ -574,17 +514,7 @@ units = {
 		ship = { name = "RM Pier Capponi" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
 		ship = { name = "RM Tito Speri" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
 		ship = { name = "RM Giovanni da Procida" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
-	}					
-	navy = {					
-		name = "4° Gruppo Sommergibili"				
-		base = 11837
-		location = 11837 # Taranto			
-		# 41a Squadriglia Sommergibili
-		ship = { name = "RM Balilla" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
-		ship = { name = "RM Antonio Sciesa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
-		ship = { name = "RM Enrico Toti" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
-		ship = { name = "RM Domenico Millelire" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
-	}					
+	}			
 	navy = {					
 		name = "7° Gruppo Sommergibili"				
 		base = 6891
@@ -594,17 +524,7 @@ units = {
 		ship = { name = "RM Anfitrite" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
 	}					
 
-	### AFRICA ###					
-	navy = {					
-		name = "Comando Navale Libico"				
-		base = 1130 
-		location = 1130 # Tobruk			
-		# 1a Squadriglia Cacciatorpedindiere
-		ship = { name = "RM Aquilone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Euro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Nembo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-		ship = { name = "RM Turbine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
-	}					
+	### AFRICA ###			
 	navy = {					
 		name = "Comando Navale Mar Rosso"				
 		base = 12766 
@@ -621,16 +541,6 @@ units = {
 		# 5a Squadriglia Torpedindiere de Mar Rosso
 		ship = { name = "RM Giovanni Acerbi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
 		ship = { name = "RM Vincenzo Giordano Orsini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
-	}					
-	navy = {					
-		name = "5° Gruppo Sommergibili"				
-		base = 1130 
-		location = 1130 # Tobruk			
-		# 51a Squadriglia Sommergibili
-		ship = { name = "RM Delfino" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
-		ship = { name = "RM Narvalo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
-		ship = { name = "RM Squalo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
-		ship = { name = "RM Tricheco" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
 	}					
 	navy = {					
 		name = "8° Gruppo Sommergibili"				

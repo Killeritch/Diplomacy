@@ -311,7 +311,7 @@ units = {
 	# subordinate to the army
 	division= {	
 		name = "2. Schnelle Division"
-		location = 6626
+		location = 11735
 		division_template = "Schnelle Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
@@ -924,7 +924,123 @@ units = {
 		ship = { name = "KB Nebojsa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }				
 		ship = { name = "KB Smeli" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }				
 		ship = { name = "KB Osvetnik" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }				
-	}
+	}				
+	navy = {				
+		name = "Force d'Attaque Légère"			
+		base = 11735 
+		location = 11735 # Trieste
+		ship = { name = "La Galissonnière" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AUS } } }	# La Galissonnière variant
+		ship = { name = "Émile Bertin" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AUS } } }
+		# 1e Division des Contre-Torpilleurs
+		ship = { name = "Lion" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "Vauban" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "Bison" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		# 3e Division des Contre-Torpilleurs
+		ship = { name = "Guépard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "Valmy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "Verdun" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		# 6e Division des Contre-Torpilleurs
+		ship = { name = "Aigle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "Milan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "Épervier" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+	}						
+	navy = {				
+		name = "6ème Escadron Sous-Marins"			
+		base = 11735 
+		location = 11735 # Trieste	
+		# 9e Division des Sous-Marins
+		ship = { name = "Caïman" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }				
+		ship = { name = "Morse" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }				
+		ship = { name = "Souffleur" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }				
+		# 10e Division des Sous-Marins
+		ship = { name = "Phoque" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }				
+		ship = { name = "Espadon" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }				
+		ship = { name = "Dauphin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }				
+		# 17e Division des Sous-Marins
+		ship = { name = "Aréthuse" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "Atalante" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "La Vestale" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "La Sultane" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS  } } }
+	}	
+	### 1st FLEET ###
+	navy = {					
+		name = "1a Squadra Navale"				
+		base = 11735
+		location = 11735 # Taranto		
+		ship = { name = "RM Zara" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Gorizia" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Fiume" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AUS  } } }
+		# 9a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Nicoloso da Recco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Emanuele Pessagno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Luca Tarigo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Antoniotto Usodimare" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+	}					
+	navy = {					
+		name = "4a Squadra Navale"				
+		base = 11735
+		location = 11735 # Taranto			
+		ship = { name = "RM Luigi Cadorna" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Armando Diaz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Alberico da Barbiano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Alberto da Giussano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AUS  } } }
+		# 6a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Bettino Ricasoli" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+		ship = { name = "RM Giovanni Nicotera" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+	}					
+	navy = {					
+		name = "5a Squadra Navale"				
+		base = 11735
+		location = 11735 # Taranto			
+		ship = { name = "RM Caio Duilio" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AUS } } }				
+		ship = { name = "RM Andrea Doria" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AUS } } }				
+		# 7a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Dardo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Freccia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Saetta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Strale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		# 8a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Baleno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Folgore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Fulmine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Lampo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+	}						
+	navy = {					
+		name = "Squadra di Taranto"				
+		base = 11735
+		location = 11735 # Taranto				
+		ship = { name = "RM San Giorgio" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AUS } } }				
+		ship = { name = "RM Taranto" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AUS } } }				
+		ship = { name = "RM Bari" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AUS } } }				
+		# 2a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Espero" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Borea" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Zeffiro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		ship = { name = "RM Ostro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS  } } }
+		# 6a Squadriglia Torpedindiere
+		ship = { name = "RM Rosolino Pilo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+		ship = { name = "RM Giuseppe Missori" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+		ship = { name = "RM Francesco Stocco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+		ship = { name = "RM Giuseppe Sirtori" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+		# 7a Squadriglia Torpedindiere
+		ship = { name = "RM Angelo Bassini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+		ship = { name = "RM Enrico Cosenz" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+		ship = { name = "RM Giacomo Medici" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+		ship = { name = "RM Nicola Fabrizi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+		# Squadriglia Cacciatorpedindiere di Taranto
+		ship = { name = "RM Carlo Mirabello" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+		ship = { name = "RM Augusto Riboty" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AUS } } }	
+	}						
+	navy = {					
+		name = "4° Gruppo Sommergibili"				
+		base = 11735
+		location = 11735 # Taranto			
+		# 41a Squadriglia Sommergibili
+		ship = { name = "RM Balilla" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }			
+		ship = { name = "RM Antonio Sciesa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }			
+		ship = { name = "RM Enrico Toti" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }			
+		ship = { name = "RM Domenico Millelire" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AUS } } }			
+	}				
 }
 
 air_wings = {
