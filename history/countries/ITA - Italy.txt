@@ -141,19 +141,23 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 76
+			popularity = 22
 		}
 
 		fascism = {
-			popularity = 22
+			popularity = 0
 		}
 		
 		communism = {
 			popularity = 2
 		}
+		
+		neutrality = { 
+			popularity = 76
+		}
 	}
 	
-	ruling_party = democratic
+	ruling_party = neutrality
 	last_election = "1934.3.26"
 	election_frequency = 60
 	elections_allowed = yes
@@ -178,7 +182,7 @@ create_country_leader = {
 	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
 	picture = "GFX_portrait_italy_ferruccio_parri"
 	expire = "1965.1.1"
-	ideology = socialism
+	ideology = centrism
 	traits = {
 		
 	}

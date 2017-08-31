@@ -15,9 +15,7 @@ bookmarks = {
 				george_v
 			}
 			focuses = {
-				tizard_mission_focus
-				ENG_war_with_germany
-				ENG_war_with_italy
+
 			}
 		}
 		"FRA"={
@@ -27,9 +25,7 @@ bookmarks = {
 				
 			}
 			focuses = {
-				FRA_initiate_government_reform
-				FRA_support_status_quo
-				FRA_revise_versailles
+
 			}
 		}
 		"GER"={
@@ -39,21 +35,17 @@ bookmarks = {
 				general_staff
 			}
 			focuses = {
-				GER_anschluss
-				GER_danzig_or_war
-				GER_ussr_war_goal
+
 			}
 		}
 		"ITA"={
 			history = "ITA_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = neutrality
 			ideas = {
 				victor_emmanuel
 			}	
 			focuses = {
-				ITA_pact_of_steel
-				ITA_spanish_italian_faction
-				ITA_italy_first
+
 			}		
 		}
 		"AUS"={
@@ -68,14 +60,12 @@ bookmarks = {
 		}
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
-			ideology = communism
+			ideology = neutrality
 			ideas = {
 				
 			}
 			focuses = {
-				SOV_great_purge
-				SOV_claims_on_baltic
-				SOV_war_with_uk
+
 			}	
 		}
 		"TUR"={
@@ -102,9 +92,7 @@ bookmarks = {
 				undisturbed_isolation
 			}
 			focuses = {
-				USA_war_plan_black
-				USA_strike_at_the_empire
-				USA_pearl_harbor_gambit
+
 			}
 		}
 		"JAP"={
@@ -115,9 +103,7 @@ bookmarks = {
 				state_shintoism
 			}	
 			focuses = {
-				southern_expansion_focus
-				divine_wind_focus
-				found_own_faction_focus
+
 			}			
 		}
 

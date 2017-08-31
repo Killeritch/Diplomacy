@@ -453,6 +453,22 @@ units = {
 		start_equipment_factor = 0.3
 
 	}
+	
+	# japanese #
+	division = {
+		name = "Saipan Kichi Shubitai"
+		location = 3995 #Saipan
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "Palau Kichi Shubitai"
+		location = 4357 #Palau
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
 
 
 	##### NAVAL UNITS #####

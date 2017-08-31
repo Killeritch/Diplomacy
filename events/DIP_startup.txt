@@ -1,0 +1,425 @@
+﻿###########################
+# DIPLOMACY MOD Startup Events
+###########################
+
+add_namespace = startup
+
+# AUSTRIA
+country_event = {
+	id = startup.1
+	title = startup.1.t
+	desc = startup.1.d
+	picture = GFX_austria_standin
+	
+	trigger = {
+		NOT = {
+			has_country_flag = startup_aus
+		}
+		OR = {
+			tag = ENG
+			tag = FRA
+			tag = GER
+			tag = ITA
+			tag = SOV
+			tag = TUR
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_country_flag = startup_aus
+	}
+	
+	option = {
+		name = startup.1.a
+		set_country_flag = aus_friendly
+	}
+	
+	option = {
+		name = startup.1.b
+	}
+
+	option = {
+		name = startup.1.c
+		set_country_flag = aus_hostile
+		create_wargoal = {
+			type = annex_everything
+			target = AUS
+		}
+	}
+	
+	option = {
+		name = startup.1.e
+		set_country_flag = aus_hostile
+		declare_war_on = {
+			target = AUS
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# UK
+country_event = {
+	id = startup.2
+	title = startup.2.t
+	desc = startup.2.d
+	picture = GFX_uk_standin
+	
+	trigger = {
+		NOT = {
+			has_country_flag = startup_eng
+		}
+		OR = {
+			tag = AUS
+			tag = FRA
+			tag = GER
+			tag = ITA
+			tag = SOV
+			tag = TUR
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_country_flag = startup_eng
+	}
+	
+	option = {
+		name = startup.2.a
+		set_country_flag = eng_friendly
+	}
+	
+	option = {
+		name = startup.2.b
+	}
+
+	option = {
+		name = startup.2.c
+		set_country_flag = eng_hostile
+		create_wargoal = {
+			type = annex_everything
+			target = ENG
+		}
+	}
+	
+	option = {
+		name = startup.2.e
+		set_country_flag = eng_hostile
+		declare_war_on = {
+			target = ENG
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# FRANCE
+country_event = {
+	id = startup.3
+	title = startup.3.t
+	desc = startup.3.d
+	picture = GFX_france_standin
+	
+	trigger = {
+		NOT = {
+			has_country_flag = startup_fra
+		}
+		OR = {
+			tag = AUS
+			tag = ENG
+			tag = GER
+			tag = ITA
+			tag = SOV
+			tag = TUR
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_country_flag = startup_fra
+	}
+	
+	option = {
+		name = startup.3.a
+		set_country_flag = fra_friendly
+	}
+	
+	option = {
+		name = startup.3.b
+	}
+
+	option = {
+		name = startup.3.c
+		set_country_flag = fra_hostile
+		create_wargoal = {
+			type = annex_everything
+			target = FRA
+		}
+	}
+	
+	option = {
+		name = startup.3.e
+		set_country_flag = fra_hostile
+		declare_war_on = {
+			target = FRA
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# GERMANY
+country_event = {
+	id = startup.4
+	title = startup.4.t
+	desc = startup.4.d
+	picture = GFX_germany_standin
+	
+	trigger = {
+		NOT = {
+			has_country_flag = startup_ger
+		}
+		OR = {
+			tag = AUS
+			tag = ENG
+			tag = FRA
+			tag = ITA
+			tag = SOV
+			tag = TUR
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_country_flag = startup_ger
+	}
+	
+	option = {
+		name = startup.4.a
+		set_country_flag = ger_friendly
+	}
+	
+	option = {
+		name = startup.4.b
+	}
+
+	option = {
+		name = startup.4.c
+		set_country_flag = ger_hostile
+		create_wargoal = {
+			type = annex_everything
+			target = GER
+		}
+	}
+	
+	option = {
+		name = startup.4.e
+		set_country_flag = ger_hostile
+		declare_war_on = {
+			target = GER
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# ITALY
+country_event = {
+	id = startup.5
+	title = startup.5.t
+	desc = startup.5.d
+	picture = GFX_italy_standin
+	
+	trigger = {
+		NOT = {
+			has_country_flag = startup_ita
+		}
+		OR = {
+			tag = AUS
+			tag = ENG
+			tag = FRA
+			tag = GER
+			tag = SOV
+			tag = TUR
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_country_flag = startup_ita
+	}
+	
+	option = {
+		name = startup.5.a
+		set_country_flag = ita_friendly
+	}
+	
+	option = {
+		name = startup.5.b
+	}
+
+	option = {
+		name = startup.5.c
+		set_country_flag = ita_hostile
+		create_wargoal = {
+			type = annex_everything
+			target = ITA
+		}
+	}
+	
+	option = {
+		name = startup.5.e
+		set_country_flag = ita_hostile
+		declare_war_on = {
+			target = ITA
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# RUSSIA
+country_event = {
+	id = startup.6
+	title = startup.6.t
+	desc = startup.6.d
+	picture = GFX_russia_standin
+	
+	trigger = {
+		NOT = {
+			has_country_flag = startup_sov
+		}
+		OR = {
+			tag = AUS
+			tag = ENG
+			tag = FRA
+			tag = GER
+			tag = ITA
+			tag = TUR
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_country_flag = startup_sov
+	}
+	
+	option = {
+		name = startup.6.a
+		set_country_flag = sov_friendly
+	}
+	
+	option = {
+		name = startup.6.b
+	}
+
+	option = {
+		name = startup.6.c
+		set_country_flag = sov_hostile
+		create_wargoal = {
+			type = annex_everything
+			target = SOV
+		}
+	}
+	
+	option = {
+		name = startup.6.e
+		set_country_flag = sov_hostile
+		declare_war_on = {
+			target = SOV
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# TURKEY
+country_event = {
+	id = startup.7
+	title = startup.7.t
+	desc = startup.7.d
+	picture = GFX_turkey_standin
+	
+	trigger = {
+		NOT = {
+			has_country_flag = startup_tur
+		}
+		OR = {
+			tag = AUS
+			tag = ENG
+			tag = FRA
+			tag = GER
+			tag = ITA
+			tag = SOV
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_country_flag = startup_tur
+	}
+	
+	option = {
+		name = startup.7.a
+		set_country_flag = tur_friendly
+	}
+	
+	option = {
+		name = startup.7.b
+	}
+
+	option = {
+		name = startup.7.c
+		set_country_flag = tur_hostile
+		create_wargoal = {
+			type = annex_everything
+			target = TUR
+		}
+	}
+	
+	option = {
+		name = startup.7.e
+		set_country_flag = tur_hostile
+		declare_war_on = {
+			target = TUR
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}

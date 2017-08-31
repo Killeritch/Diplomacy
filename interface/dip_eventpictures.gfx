@@ -1,0 +1,30 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_austria_standin"
+		texturefile = "gfx/event_pictures/austria_standin.dds"
+	}
+	spriteType = {
+		name = "GFX_uk_standin"
+		texturefile = "gfx/event_pictures/uk_standin.dds"
+	}
+	spriteType = {
+		name = "GFX_france_standin"
+		texturefile = "gfx/event_pictures/france_standin.dds"
+	}
+	spriteType = {
+		name = "GFX_germany_standin"
+		texturefile = "gfx/event_pictures/germany_standin.dds"
+	}
+	spriteType = {
+		name = "GFX_italy_standin"
+		texturefile = "gfx/event_pictures/italy_standin.dds"
+	}
+	spriteType = {
+		name = "GFX_russia_standin"
+		texturefile = "gfx/event_pictures/russia_standin.dds"
+	}
+	spriteType = {
+		name = "GFX_turkey_standin"
+		texturefile = "gfx/event_pictures/turkey_standin.dds"
+	}
