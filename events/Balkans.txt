@@ -1,0 +1,362 @@
+﻿###########################
+# Balkans Events
+###########################
+
+add_namespace = balkans
+
+# Austrian ultimatum to Serbia
+country_event = {
+	id = balkans.1
+	title = balkans.1.t
+	desc = balkans.1.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = balkans.1.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = AUS }
+					OR = {
+						has_guaranteed = SER
+						is_in_faction_with = SER
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism #glorious Serbia will never yield!
+				}
+			}
+		}
+		AUS = {
+			country_event = { days = 1 id = balkans.4 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Resist
+		name = balkans.1.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = AUS
+						AUS = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = AUS }
+								has_guaranteed = SER
+							} 
+						}
+					}
+				}
+			}
+		}
+		AUS = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = SER
+					generator = { 107 }
+				}
+			}
+			country_event = { days = 1 id = balkans.5 }
+		}
+	}
+}
+
+# Russian ultimatum to Romania
+country_event = {
+	id = balkans.2
+	title = balkans.2.t
+	desc = balkans.2.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = balkans.2.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = SOV }
+					OR = {
+						has_guaranteed = ROM
+						is_in_faction_with = ROM
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		SOV = {
+			country_event = { days = 1 id = balkans.6 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Resist
+		name = balkans.2.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = SOV
+						SOV = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = SOV }
+								has_guaranteed = ROM
+							} 
+						}
+					}
+				}
+			}
+		}
+		SOV = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = ROM
+					generator = { 79 }
+				}
+			}
+			country_event = { days = 1 id = balkans.7 }
+		}
+	}
+}
+
+# Turkish ultimatum to Bulgaria
+country_event = {
+	id = balkans.3
+	title = balkans.3.t
+	desc = balkans.3.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = balkans.3.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = TUR }
+					OR = {
+						has_guaranteed = BUL
+						is_in_faction_with = BUL
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		TUR = {
+			country_event = { days = 1 id = balkans.8 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Resist
+		name = balkans.3.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = TUR
+						TUR = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = TUR }
+								has_guaranteed = BUL
+							} 
+						}
+					}
+				}
+			}
+		}
+		TUR = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = BUL
+					generator = { 184 }
+				}
+			}
+			country_event = { days = 1 id = balkans.9 }
+		}
+	}
+}
+
+# Serbia Yields
+country_event = {
+	id = balkans.4
+	title = balkans.4.t
+	desc = balkans.4.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = balkans.4.a
+		transfer_state = 107
+	}
+}
+
+# Serbia Resists
+country_event = {
+	id = balkans.5
+	title = balkans.5.t
+	desc = balkans.5.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = balkans.5.a
+		create_wargoal = {
+			type = take_state_focus
+			target = SER
+			generator = { 107 }
+		}
+	}
+}
+
+# Romania Yields
+country_event = {
+	id = balkans.6
+	title = balkans.6.t
+	desc = balkans.6.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = balkans.6.a
+		transfer_state = 79
+	}
+}
+
+# Romania Resists
+country_event = {
+	id = balkans.7
+	title = balkans.7.t
+	desc = balkans.7.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = balkans.7.a
+		create_wargoal = {
+			type = take_state_focus
+			target = ROM
+			generator = { 79 }
+		}
+	}
+}
+
+# Bulgaria Yields
+country_event = {
+	id = balkans.8
+	title = balkans.8.t
+	desc = balkans.8.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = balkans.8.a
+		transfer_state = 184
+	}
+}
+
+# Bulgaria Resists
+country_event = {
+	id = balkans.9
+	title = balkans.9.t
+	desc = balkans.9.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = balkans.9.a
+		create_wargoal = {
+			type = take_state_focus
+			target = BUL
+			generator = { 184 }
+		}
+	}
+}
+
+# Austrian ambitions in the Balkans
+#country_event = {
+#	id = balkans.25
+#	title = balkans.25.t
+#	desc = balkans.25.d
+#	picture = GFX_report_event_soviet_purge_trial
+#
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		OR = {
+#			tag = ITA
+#			tag = SOV
+#			tag = TUR
+#		}
+#		AUS = {
+#			NOT = { has_completed_focus = DIP_AUS_balkans_1 }
+#			focus_progress = {
+#				focus = DIP_AUS_balkans_1
+#				progress > 0.1
+#			}
+#		}
+#	}
+#
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#
+#	option = {
+#		ai_chance = {
+#			factor = 30
+#		}
+#		name = balkans.25.a
+#	}
+#}

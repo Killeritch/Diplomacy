@@ -340,6 +340,23 @@ units = {
 		start_equipment_factor = 0.5
 
 	}
+	##### Royal Yemeni Army #####
+	division = {
+		name = "Alfurqat Alfursan Almalika"
+		location = 10840
+		division_template = "Süvari Tümeni"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "Alfurqat Almasha Almalika"
+		location = 10840
+		division_template = "Piyade Tümeni"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
 
 	##### NAVAL UNITS #####
 	### Türk Donanmasi ###

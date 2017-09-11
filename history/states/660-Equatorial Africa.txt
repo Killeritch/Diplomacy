@@ -1,0 +1,29 @@
+
+state={
+	id=660
+	name="STATE_660"
+	manpower = 2572456
+	
+	state_category = wasteland
+	resources={
+		rubber=4
+	}
+	history={
+		owner = FRA
+		victory_points = {
+			5139 1
+		}
+		buildings = {
+			infrastructure = 2
+			5139 = {
+				naval_base = 1
+			}
+		}
+
+	}
+
+	provinces={
+		1883 1974 1993 2081 3165 3181 5084 7919 8078 9152 11108 12719 12830 1473 4978 4897 3123		
+		2192 3109 5139 6008 8193 8207 10948 11012 12975 # gabon & congo
+	}
+}

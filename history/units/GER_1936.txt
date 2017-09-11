@@ -454,20 +454,92 @@ units = {
 
 	}
 	
-	# japanese #
+	#### JAPANESE ####
+	### Island IJN Garrisons ###
+	#1 Konkyochi Ichigun
 	division = {
-		name = "Saipan Kichi Shubitai"
+		name = "Saipan Garrison"
 		location = 3995 #Saipan
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3		
 	}
+
+	#2 Konkyochi Ichigun
 	division = {
-		name = "Palau Kichi Shubitai"
+		name = "Yap Garrison"
+		location = 13028 #Yap
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "Palau Garrison"
 		location = 4357 #Palau
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "Truk Garrison"
+		location = 2489 #Truk
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "Satawan Garrison"
+		location = 13035 #Satawan
+
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+		
+	}
+	division = {
+		name = "Ulithi Garrison"
+		location = 13029 #Ulithi
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+
+	#3 Konkyochi Ichigun
+	division = {
+		name = "Kwajalein Garrison"
+		location = 13041 #Kwajalein
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "Eniwetok Garrison"
+		location = 13046 #Eniwetok
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "Ponape Garrison"
+		location = 13036 #Ponape
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "Mili Garrison"
+		location = 13040 #Mili
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3		
+	}
+	division = {
+		name = "Maleolap Garrison"
+		location = 13043 #Maleolap
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+		
 	}
 
 
@@ -589,8 +661,25 @@ units = {
 		ship = { name = "Ariane" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }				
 		ship = { name = "Eurydice" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }				
 		ship = { name = "Danaé" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GER } } }				
-	}	
-}
+	}
+	
+	### PACIFIC ###
+	#Truk
+
+	navy = {
+		name = "Nanpo Yuso Sendan"
+		base = 2489
+		location = 2489  # Truk
+		ship = { name = "Oite" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = GER} } }
+		ship = { name = "Hayate" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = GER} } }
+		ship = { name = "Yugao" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = GER} } }
+		#Former Dai 2 Kuchikutai
+		ship = { name = "Minekaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = GER} } }
+		ship = { name = "Sawakaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = GER} } }
+		ship = { name = "Okikaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = GER} } }
+		ship = { name = "Yakaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = GER} } }
+	}
+}	
 
 ### Air oob
 air_wings = {

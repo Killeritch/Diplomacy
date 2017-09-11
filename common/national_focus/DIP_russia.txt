@@ -1,0 +1,31 @@
+focus_tree = {
+	id = dip_russian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	
+	default = no
+	
+	focus = {
+		id = DIP_SOV_balkans_1
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = ROM
+		x = 2
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = no
+
+		completion_reward = {
+			ROM = {
+				country_event = { id = balkans.2 days = 1 }
+			}
+		}
+	}
+}

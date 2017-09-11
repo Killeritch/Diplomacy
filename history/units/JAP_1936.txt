@@ -234,76 +234,6 @@ units = {
 		start_equipment_factor = 0.3	
 	}
 
-	#2 Konkyochi Ichigun
-	division = {
-		name = "Yappu Kichi Shubitai"
-		location = 13028 #Yap
-		division_template = "Chuton-chi Shidan"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3		
-	}
-	division = {
-		name = "Truk Kichi Shubitai"
-		location = 2489 #Truk
-		division_template = "Chuton-chi Shidan"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3		
-	}
-	division = {
-		name = "Satawan Kichi Shubitai"
-		location = 13035 #Satawan
-
-		division_template = "Chuton-chi Shidan"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-		
-	}
-	division = {
-		name = "Ulithi Kichi Shubitai"
-		location = 13029 #Ulithi
-		division_template = "Chuton-chi Shidan"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3		
-	}
-
-	#3 Konkyochi Ichigun
-	division = {
-		name = "Kwajalein Kichi Shubitai"
-		location = 13041 #Kwajalein
-		division_template = "Chuton-chi Shidan"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3		
-	}
-	division = {
-		name = "Eniwetok Kichi Shubitai"
-		location = 13046 #Eniwetok
-		division_template = "Chuton-chi Shidan"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3		
-	}
-	division = {
-		name = "Ponape Kichi Shubitai"
-		location = 13036 #Ponape
-		division_template = "Chuton-chi Shidan"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3		
-	}
-	division = {
-		name = "Mili Kichi Shubitai"
-		location = 13040 #Mili
-		division_template = "Chuton-chi Shidan"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3		
-	}
-	division = {
-		name = "Maleolap Kichi Shubitai"
-		location = 13043 #Maleolap
-		division_template = "Chuton-chi Shidan"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-		
-	}
-
 ### IJN ###
 #Taiwan (Goaxing)
 	navy = {
@@ -633,24 +563,7 @@ units = {
 		ship = { name = "Namikaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
 		ship = { name = "Numakaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }	
 	}
-	
-#Truk
-
-	navy = {
-		name = "Nanpo Yuso Sendan"
-		base = 2489
-		location = 2489  # Truk
-		ship = { name = "Oite" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
-		ship = { name = "Hayate" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
-		ship = { name = "Yugao" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
-		#Former Dai 2 Kuchikutai
-		ship = { name = "Minekaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
-		ship = { name = "Sawakaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
-		ship = { name = "Okikaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
-		ship = { name = "Yakaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
-	}
 }
-
 
 
 

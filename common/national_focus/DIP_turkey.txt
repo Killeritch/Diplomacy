@@ -1,0 +1,31 @@
+focus_tree = {
+	id = dip_turkish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TUR
+		}
+	}
+	
+	default = no
+	
+	focus = {
+		id = DIP_TUR_balkans_1
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = BUL
+		x = 2
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = no
+
+		completion_reward = {
+			BUL = {
+				country_event = { id = balkans.3 days = 1 }
+			}
+		}
+	}
+}

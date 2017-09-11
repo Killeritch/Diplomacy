@@ -1,0 +1,326 @@
+﻿###########################
+# Benelux Events
+###########################
+
+add_namespace = benelux
+
+# UK ultimatum to Netherlands
+country_event = {
+	id = benelux.1
+	title = benelux.1.t
+	desc = benelux.1.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = benelux.1.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = ENG }
+					OR = {
+						has_guaranteed = HOL
+						is_in_faction_with = HOL
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism #glorious Netherlands will never yield!
+				}
+			}
+		}
+		ENG = {
+			country_event = { days = 1 id = benelux.4 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Resist
+		name = benelux.1.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = ENG
+						ENG = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = ENG }
+								has_guaranteed = HOL
+							} 
+						}
+					}
+				}
+			}
+		}
+		ENG = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = HOL
+					generator = { 7 }
+				}
+			}
+			country_event = { days = 1 id = benelux.5 }
+		}
+	}
+}
+
+# French ultimatum to Belgium
+country_event = {
+	id = benelux.2
+	title = benelux.2.t
+	desc = benelux.2.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = benelux.2.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = FRA }
+					OR = {
+						has_guaranteed = BEL
+						is_in_faction_with = BEL
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		FRA = {
+			country_event = { days = 1 id = benelux.6 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Resist
+		name = benelux.2.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = FRA
+						FRA = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = FRA }
+								has_guaranteed = BEL
+							} 
+						}
+					}
+				}
+			}
+		}
+		FRA = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = BEL
+					generator = { 34 }
+				}
+			}
+			country_event = { days = 1 id = benelux.7 }
+		}
+	}
+}
+
+# German ultimatum to Netherlands
+country_event = {
+	id = benelux.3
+	title = benelux.3.t
+	desc = benelux.3.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = benelux.3.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = GER }
+					OR = {
+						has_guaranteed = HOL
+						is_in_faction_with = HOL
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		GER = {
+			country_event = { days = 1 id = benelux.8 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Resist
+		name = benelux.3.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = GER
+						GER = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = GER }
+								has_guaranteed = HOL
+							} 
+						}
+					}
+				}
+			}
+		}
+		GER = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = HOL
+					generator = { 36 }
+				}
+			}
+			country_event = { days = 1 id = benelux.9 }
+		}
+	}
+}
+
+# Netherlands Yields
+country_event = {
+	id = benelux.4
+	title = benelux.4.t
+	desc = benelux.4.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.4.a
+		transfer_state = 7
+	}
+}
+
+# Netherlands Resists
+country_event = {
+	id = benelux.5
+	title = benelux.5.t
+	desc = benelux.5.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.5.a
+		create_wargoal = {
+			type = take_state_focus
+			target = HOL
+			generator = { 7 }
+		}
+	}
+}
+
+# Belgium Yields
+country_event = {
+	id = benelux.6
+	title = benelux.6.t
+	desc = benelux.6.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.6.a
+		transfer_state = 34
+	}
+}
+
+# Belgium Resists
+country_event = {
+	id = benelux.7
+	title = benelux.7.t
+	desc = benelux.7.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.7.a
+		create_wargoal = {
+			type = take_state_focus
+			target = BEL
+			generator = { 34 }
+		}
+	}
+}
+
+# Netherlands Yields
+country_event = {
+	id = benelux.8
+	title = benelux.8.t
+	desc = benelux.8.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.8.a
+		transfer_state = 36
+	}
+}
+
+# Netherlands Resists
+country_event = {
+	id = benelux.9
+	title = benelux.9.t
+	desc = benelux.9.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.9.a
+		create_wargoal = {
+			type = take_state_focus
+			target = HOL
+			generator = { 36 }
+		}
+	}
+}

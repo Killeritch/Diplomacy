@@ -47,6 +47,7 @@ set_technology = {
 add_ideas = {
 	stiff_upper_lip
 	george_v
+#	great_power
 }
 
 set_convoys = 800

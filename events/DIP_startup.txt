@@ -12,9 +12,6 @@ country_event = {
 	picture = GFX_austria_standin
 	
 	trigger = {
-		NOT = {
-			has_country_flag = startup_aus
-		}
 		OR = {
 			tag = ENG
 			tag = FRA
@@ -23,15 +20,10 @@ country_event = {
 			tag = SOV
 			tag = TUR
 		}
+		is_ai = no
 	}
 	
-	mean_time_to_happen = {
-		days = 7
-	}
-	
-	immediate = {
-		set_country_flag = startup_aus
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = startup.1.a
@@ -50,18 +42,6 @@ country_event = {
 			target = AUS
 		}
 	}
-	
-	option = {
-		name = startup.1.e
-		set_country_flag = aus_hostile
-		declare_war_on = {
-			target = AUS
-			type = annex_everything
-		}
-		ai_chance = {
-			base = 0
-		}
-	}
 }
 
 # UK
@@ -72,9 +52,6 @@ country_event = {
 	picture = GFX_uk_standin
 	
 	trigger = {
-		NOT = {
-			has_country_flag = startup_eng
-		}
 		OR = {
 			tag = AUS
 			tag = FRA
@@ -83,15 +60,10 @@ country_event = {
 			tag = SOV
 			tag = TUR
 		}
+		is_ai = no
 	}
 	
-	mean_time_to_happen = {
-		days = 7
-	}
-	
-	immediate = {
-		set_country_flag = startup_eng
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = startup.2.a
@@ -110,18 +82,6 @@ country_event = {
 			target = ENG
 		}
 	}
-	
-	option = {
-		name = startup.2.e
-		set_country_flag = eng_hostile
-		declare_war_on = {
-			target = ENG
-			type = annex_everything
-		}
-		ai_chance = {
-			base = 0
-		}
-	}
 }
 
 # FRANCE
@@ -132,9 +92,6 @@ country_event = {
 	picture = GFX_france_standin
 	
 	trigger = {
-		NOT = {
-			has_country_flag = startup_fra
-		}
 		OR = {
 			tag = AUS
 			tag = ENG
@@ -143,15 +100,10 @@ country_event = {
 			tag = SOV
 			tag = TUR
 		}
+		is_ai = no
 	}
 	
-	mean_time_to_happen = {
-		days = 7
-	}
-	
-	immediate = {
-		set_country_flag = startup_fra
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = startup.3.a
@@ -170,18 +122,6 @@ country_event = {
 			target = FRA
 		}
 	}
-	
-	option = {
-		name = startup.3.e
-		set_country_flag = fra_hostile
-		declare_war_on = {
-			target = FRA
-			type = annex_everything
-		}
-		ai_chance = {
-			base = 0
-		}
-	}
 }
 
 # GERMANY
@@ -192,9 +132,6 @@ country_event = {
 	picture = GFX_germany_standin
 	
 	trigger = {
-		NOT = {
-			has_country_flag = startup_ger
-		}
 		OR = {
 			tag = AUS
 			tag = ENG
@@ -203,15 +140,10 @@ country_event = {
 			tag = SOV
 			tag = TUR
 		}
+		is_ai = no
 	}
 	
-	mean_time_to_happen = {
-		days = 7
-	}
-	
-	immediate = {
-		set_country_flag = startup_ger
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = startup.4.a
@@ -230,18 +162,6 @@ country_event = {
 			target = GER
 		}
 	}
-	
-	option = {
-		name = startup.4.e
-		set_country_flag = ger_hostile
-		declare_war_on = {
-			target = GER
-			type = annex_everything
-		}
-		ai_chance = {
-			base = 0
-		}
-	}
 }
 
 # ITALY
@@ -252,9 +172,6 @@ country_event = {
 	picture = GFX_italy_standin
 	
 	trigger = {
-		NOT = {
-			has_country_flag = startup_ita
-		}
 		OR = {
 			tag = AUS
 			tag = ENG
@@ -263,15 +180,10 @@ country_event = {
 			tag = SOV
 			tag = TUR
 		}
+		is_ai = no
 	}
 	
-	mean_time_to_happen = {
-		days = 7
-	}
-	
-	immediate = {
-		set_country_flag = startup_ita
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = startup.5.a
@@ -290,18 +202,6 @@ country_event = {
 			target = ITA
 		}
 	}
-	
-	option = {
-		name = startup.5.e
-		set_country_flag = ita_hostile
-		declare_war_on = {
-			target = ITA
-			type = annex_everything
-		}
-		ai_chance = {
-			base = 0
-		}
-	}
 }
 
 # RUSSIA
@@ -312,9 +212,6 @@ country_event = {
 	picture = GFX_russia_standin
 	
 	trigger = {
-		NOT = {
-			has_country_flag = startup_sov
-		}
 		OR = {
 			tag = AUS
 			tag = ENG
@@ -323,15 +220,10 @@ country_event = {
 			tag = ITA
 			tag = TUR
 		}
+		is_ai = no
 	}
 	
-	mean_time_to_happen = {
-		days = 7
-	}
-	
-	immediate = {
-		set_country_flag = startup_sov
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = startup.6.a
@@ -350,18 +242,6 @@ country_event = {
 			target = SOV
 		}
 	}
-	
-	option = {
-		name = startup.6.e
-		set_country_flag = sov_hostile
-		declare_war_on = {
-			target = SOV
-			type = annex_everything
-		}
-		ai_chance = {
-			base = 0
-		}
-	}
 }
 
 # TURKEY
@@ -372,9 +252,6 @@ country_event = {
 	picture = GFX_turkey_standin
 	
 	trigger = {
-		NOT = {
-			has_country_flag = startup_tur
-		}
 		OR = {
 			tag = AUS
 			tag = ENG
@@ -383,15 +260,10 @@ country_event = {
 			tag = ITA
 			tag = SOV
 		}
+		is_ai = no
 	}
 	
-	mean_time_to_happen = {
-		days = 7
-	}
-	
-	immediate = {
-		set_country_flag = startup_tur
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = startup.7.a
@@ -410,16 +282,27 @@ country_event = {
 			target = TUR
 		}
 	}
+}
+
+# START
+country_event = {
+	id = startup.10
+	title = startup.10.t
+	desc = startup.10.d
+	picture = GFX_austria_standin
+	
+	is_triggered_only = yes
 	
 	option = {
-		name = startup.7.e
-		set_country_flag = tur_hostile
-		declare_war_on = {
-			target = TUR
-			type = annex_everything
-		}
-		ai_chance = {
-			base = 0
+		name = startup.10.a
+		hidden_effect = {
+			country_event = { id = startup.1 days = 1 }
+			country_event = { id = startup.2 days = 2 }
+			country_event = { id = startup.3 days = 3 }
+			country_event = { id = startup.4 days = 4 }
+			country_event = { id = startup.5 days = 5 }
+			country_event = { id = startup.6 days = 6 }
+			country_event = { id = startup.7 days = 7 }
 		}
 	}
 }

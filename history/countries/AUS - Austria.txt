@@ -23,6 +23,10 @@ set_technology = {
 	superior_firepower = 1
 }
 
+add_ideas = {
+#	great_power
+}
+
 set_politics = {
 
 	parties = {

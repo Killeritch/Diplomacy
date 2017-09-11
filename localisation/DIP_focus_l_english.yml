@@ -1,0 +1,12 @@
+﻿l_english:
+ DIP_AUS_balkans_1:0 "Demand Belgrade"
+ DIP_AUS_balkans_1_desc:0 "The Serbian state to our south is a threat to us, but not as much as we are to them. We can resolve this tension by sending them an ultimatum demanding the partition of their country."
+ DIP_ENG_benelux_1:0 "Demand Holland"
+ DIP_ENG_benelux_1_desc:0 "The UK has not had a foothold in the Low Countries since Calais was lost in 1558. Our current strategic situation would be greatly aided by gaining a new one, and the Netherlands look too weak to resist us..."
+ DIP_FRA_benelux_1:0 "Referendum in Wallonia"
+ DIP_FRA_benelux_1_desc:0 "Belgium has always been an unnatural creation, half French-speaking and half Flemish-speaking. We should solve this problem by proposing a referendum in French-speaking Wallonia to join France."
+ DIP_GER_benelux_1:0 "Demand Friesland"
+ DIP_GER_benelux_1_desc:0 "The people of Friesland have always been very closely tied to Germany. We should demand the area from the Netherlands."
+ DIP_SOV_balkans_1:0 "Demand Moldavia"
+ DIP_TUR_balkans_1:0 "Demand Thrace"
+ 
