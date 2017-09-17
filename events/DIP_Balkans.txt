@@ -39,7 +39,7 @@ country_event = {
 		AUS = {
 			country_event = { days = 1 id = balkans.4 }
 		}
-		custom_effect_tooltip = GAME_OVER_TT
+		
 	}
 	option = { # Resist
 		name = balkans.1.b
@@ -112,7 +112,7 @@ country_event = {
 		SOV = {
 			country_event = { days = 1 id = balkans.6 }
 		}
-		custom_effect_tooltip = GAME_OVER_TT
+		
 	}
 	option = { # Resist
 		name = balkans.2.b
@@ -185,7 +185,7 @@ country_event = {
 		TUR = {
 			country_event = { days = 1 id = balkans.8 }
 		}
-		custom_effect_tooltip = GAME_OVER_TT
+		
 	}
 	option = { # Resist
 		name = balkans.3.b
@@ -326,37 +326,37 @@ country_event = {
 }
 
 # Austrian ambitions in the Balkans
-#country_event = {
-#	id = balkans.25
-#	title = balkans.25.t
-#	desc = balkans.25.d
-#	picture = GFX_report_event_soviet_purge_trial
-#
-#	fire_only_once = yes
-#	
-#	trigger = {
-#		OR = {
-#			tag = ITA
-#			tag = SOV
-#			tag = TUR
-#		}
-#		AUS = {
-#			NOT = { has_completed_focus = DIP_AUS_balkans_1 }
-#			focus_progress = {
-#				focus = DIP_AUS_balkans_1
-#				progress > 0.1
-#			}
-#		}
-#	}
-#
-#	mean_time_to_happen = {
-#		days = 1
-#	}
-#
-#	option = {
-#		ai_chance = {
-#			factor = 30
-#		}
-#		name = balkans.25.a
-#	}
-#}
+country_event = {
+	id = balkans.25
+	title = balkans.25.t
+	desc = balkans.25.d
+	picture = GFX_report_event_soviet_purge_trial
+
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = ITA
+			tag = SOV
+			tag = TUR
+		}
+		AUS = {
+			NOT = { has_completed_focus = DIP_AUS_balkans_1 }
+			focus_progress = {
+				focus = DIP_AUS_balkans_1
+				progress > 0.1
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		ai_chance = {
+			factor = 30
+		}
+		name = balkans.25.a
+	}
+}

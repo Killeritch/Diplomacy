@@ -9,7 +9,7 @@ country_event = {
 	id = benelux.1
 	title = benelux.1.t
 	desc = benelux.1.d
-	picture = GFX_report_event_soviet_purge_speech
+	picture = GFX_uk_standin
 	
 	is_triggered_only = yes
 	
@@ -32,14 +32,14 @@ country_event = {
 				factor = 0.5
 				OR = {
 					has_government = communism
-					has_government = fascism #glorious Netherlands will never yield!
+					has_government = fascism
 				}
 			}
 		}
 		ENG = {
 			country_event = { days = 1 id = benelux.4 }
 		}
-		custom_effect_tooltip = GAME_OVER_TT
+		
 	}
 	option = { # Resist
 		name = benelux.1.b
@@ -82,7 +82,7 @@ country_event = {
 	id = benelux.2
 	title = benelux.2.t
 	desc = benelux.2.d
-	picture = GFX_report_event_soviet_purge_speech
+	picture = GFX_france_standin
 	
 	is_triggered_only = yes
 	
@@ -112,7 +112,7 @@ country_event = {
 		FRA = {
 			country_event = { days = 1 id = benelux.6 }
 		}
-		custom_effect_tooltip = GAME_OVER_TT
+		
 	}
 	option = { # Resist
 		name = benelux.2.b
@@ -155,7 +155,7 @@ country_event = {
 	id = benelux.3
 	title = benelux.3.t
 	desc = benelux.3.d
-	picture = GFX_report_event_soviet_purge_speech
+	picture = GFX_germany_standin
 	
 	is_triggered_only = yes
 	
@@ -185,7 +185,7 @@ country_event = {
 		GER = {
 			country_event = { days = 1 id = benelux.8 }
 		}
-		custom_effect_tooltip = GAME_OVER_TT
+		
 	}
 	option = { # Resist
 		name = benelux.3.b
@@ -321,6 +321,138 @@ country_event = {
 			type = take_state_focus
 			target = HOL
 			generator = { 36 }
+		}
+	}
+}
+
+# UK pressuring Netherlands
+country_event = {
+	id = benelux.11
+	title = benelux.11.t
+	desc = benelux.11.d
+	picture = GFX_uk_standin
+	
+	trigger = {
+		OR = {
+			tag = FRA
+			tag = GER
+		}
+		NOT = { has_country_flag = benelux_pro_ENG }
+		NOT = { has_country_flag = benelux_anti_ENG }
+		ENG = {
+			NOT = { has_completed_focus = DIP_ENG_benelux_1 }
+			focus_progress = {
+				focus = DIP_ENG_benelux_1
+				progress > 0.1
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = { # let it slide
+		name = benelux.11.a
+		set_country_flag = benelux_pro_ENG
+	}
+	
+	option = { # guarantee Netherlands
+		name = benelux.11.b
+		set_country_flag = benelux_anti_ENG
+		if = {
+			limit = {
+				NOT = { has_guaranteed = HOL }
+			}
+			give_guarantee = HOL
+		}
+	}
+}
+
+# France pressuring Belgium
+country_event = {
+	id = benelux.12
+	title = benelux.12.t
+	desc = benelux.12.d
+	picture = GFX_france_standin
+	
+	trigger = {
+		OR = {
+			tag = ENG
+			tag = GER
+		}
+		NOT = { has_country_flag = benelux_pro_FRA }
+		NOT = { has_country_flag = benelux_anti_FRA }
+		FRA = {
+			NOT = { has_completed_focus = DIP_FRA_benelux_1 }
+			focus_progress = {
+				focus = DIP_FRA_benelux_1
+				progress > 0.1
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = { # let it slide
+		name = benelux.12.a
+		set_country_flag = benelux_pro_FRA
+	}
+	
+	option = { # guarantee Belgium
+		name = benelux.12.b
+		set_country_flag = benelux_anti_FRA
+		if = {
+			limit = {
+				NOT = { has_guaranteed = BEL }
+			}
+			give_guarantee = BEL
+		}
+	}
+}
+
+# Germany pressuring Netherlands
+country_event = {
+	id = benelux.13
+	title = benelux.13.t
+	desc = benelux.13.d
+	picture = GFX_germany_standin
+	
+	trigger = {
+		OR = {
+			tag = ENG
+			tag = FRA
+		}
+		NOT = { has_country_flag = benelux_pro_GER }
+		NOT = { has_country_flag = benelux_anti_GER }
+		GER = {
+			NOT = { has_completed_focus = DIP_GER_benelux_1 }
+			focus_progress = {
+				focus = DIP_GER_benelux_1
+				progress > 0.1
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = { # let it slide
+		name = benelux.13.a
+		set_country_flag = benelux_pro_GER
+	}
+	
+	option = { # guarantee Netherlands
+		name = benelux.13.b
+		set_country_flag = benelux_anti_GER
+		if = {
+			limit = {
+				NOT = { has_guaranteed = HOL }
+			}
+			give_guarantee = HOL
 		}
 	}
 }

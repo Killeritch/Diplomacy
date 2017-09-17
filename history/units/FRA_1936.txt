@@ -488,142 +488,6 @@ units = {
 	}
 
 
-	##### North African Theatre #####
-	### Army: Troupes de Alger ###
-	# XIXe Corps d'Armée (Région Militaire in 1936) -- Alger
-	division= {	
-		name = "1ère Bge. d'Infanterie Algérienne"
-		location = 1145
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "2ème Bge. d'Infanterie Algérienne"
-		location = 1145
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "4ème Bge. d'Infanterie Algérienne"
-		location = 1145
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "5ème Bge. d'Infanterie Algérienne"
-		location = 1145
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	# attached directly to Army
-	division= {	
-		name = "3ème Bge. d'Infanterie Algérienne"
-		location = 7132
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "7ème Bge. d'Infanterie Algérienne"
-		location = 7132
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "Groupement Cavalerie d'Algérienne"
-		location = 7132
-		division_template = "Division de Cavalerie" 	
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	
-	### Army: Protectorat de Tunisie ### -- Tunis
-	division= {	
-		name = "Division de Tunis"
-		location = 11969
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division= {	
-		name = "Division de Sousse"
-		location = 9994
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-
-	### Army: Protectorat du Maroc ### -- Casablanca
-	division= {	
-		name = "Division de Meknès"
-		location = 7069
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division= {	
-		name = "Division de Casablanca"	
-		location = 7069
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "Division de Fès"
-		location = 7100
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "Division de Marrakech"	
-		location = 7069
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "Groupement de Maroc"
-		location = 7100
-		division_template = "Division de Cavalerie" 	
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-
-
 	##### Eastern Mediterranean Theatre #####
 	# Troupes de Madagascar
 	division= {	
@@ -962,25 +826,15 @@ instant_effect = {
 
 	# Ship Production
 	# SS: Redoutable variant (x7) ("Le Héros" "Le Conquérant" "Le Tonnant" "Agosta" "Sfax" "Casabianca" "Bévéziers")
-	add_equipment_production = {
-		equipment = {
-			type = submarine_1
-			creator = "FRA" 
-			version_name = "Redoutable Class"
-		}
-		requested_factories = 3
-		progress = 0.80
-		amount = 7
-	}
 	# SS: Minerve class (x4) ("Iris" "Minerve" "Vénus" "Junon")
 	add_equipment_production = {
 		equipment = {
 			type = submarine_2
 			creator = "FRA" 
 		}
-		requested_factories = 1
+		requested_factories = 4
 		progress = 0.70
-		amount = 4
+		amount = 11
 	}
 	# DD: Le Fantasque class (x4) ("Le Malin" "L'Indomptable" "Le Fantasque" "Le Triomphant")
 	add_equipment_production = {
@@ -1008,7 +862,7 @@ instant_effect = {
 			type = light_cruiser_2
 			creator = "FRA" 
 		}
-		requested_factories = 2
+		requested_factories = 1
 		progress = 0.10
 		amount = 5
 	}
