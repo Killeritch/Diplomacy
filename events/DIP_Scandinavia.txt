@@ -1,0 +1,460 @@
+﻿###########################
+# Scandinavia Events
+###########################
+
+add_namespace = scandinavia
+
+# British ultimatum to Denmark
+country_event = {
+	id = scandinavia.1
+	title = scandinavia.1.t
+	desc = scandinavia.1.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = scandinavia.1.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = ENG }
+					OR = {
+						has_guaranteed = DEN
+						is_in_faction_with = DEN
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		ENG = {
+			country_event = { days = 1 id = scandinavia.4 }
+		}
+		
+	}
+	option = { # Resist
+		name = scandinavia.1.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = ENG
+						ENG = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = ENG }
+								has_guaranteed = DEN
+							} 
+						}
+					}
+				}
+			}
+		}
+		ENG = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = DEN
+					generator = { 100 101 337 }
+				}
+			}
+			country_event = { days = 1 id = scandinavia.5 }
+		}
+	}
+}
+
+# German ultimatum to Denmark
+country_event = {
+	id = scandinavia.2
+	title = scandinavia.2.t
+	desc = scandinavia.2.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = scandinavia.2.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = GER }
+					OR = {
+						has_guaranteed = DEN
+						is_in_faction_with = DEN
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		GER = {
+			country_event = { days = 1 id = scandinavia.6 }
+		}
+		
+	}
+	option = { # Resist
+		name = scandinavia.2.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = GER
+						GER = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = GER }
+								has_guaranteed = DEN
+							} 
+						}
+					}
+				}
+			}
+		}
+		GER = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = DEN
+					generator = { 99 }
+				}
+			}
+			country_event = { days = 1 id = scandinavia.7 }
+		}
+	}
+}
+
+# Russian ultimatum to Sweden
+country_event = {
+	id = scandinavia.3
+	title = scandinavia.3.t
+	desc = scandinavia.3.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = scandinavia.3.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = SOV }
+					OR = {
+						has_guaranteed = SWE
+						is_in_faction_with = SWE
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		SOV = {
+			country_event = { days = 1 id = scandinavia.8 }
+		}
+		
+	}
+	option = { # Resist
+		name = scandinavia.3.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = SOV
+						SOV = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = SOV }
+								has_guaranteed = SWE
+							} 
+						}
+					}
+				}
+			}
+		}
+		SOV = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = SWE
+					generator = { 666 }
+				}
+			}
+			country_event = { days = 1 id = scandinavia.9 }
+		}
+	}
+}
+
+# Denmark Yields
+country_event = {
+	id = scandinavia.4
+	title = scandinavia.4.t
+	desc = scandinavia.4.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = scandinavia.4.a
+		transfer_state = 100
+		transfer_state = 101
+		transfer_state = 337
+	}
+}
+
+# Denmark Resists
+country_event = {
+	id = scandinavia.5
+	title = scandinavia.5.t
+	desc = scandinavia.5.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = scandinavia.5.a
+		create_wargoal = {
+			type = take_state_focus
+			target = DEN
+			generator = { 100 101 337 }
+		}
+	}
+}
+
+# Denmark Yields
+country_event = {
+	id = scandinavia.6
+	title = scandinavia.6.t
+	desc = scandinavia.6.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = scandinavia.6.a
+		transfer_state = 99
+	}
+}
+
+# Denmark Resists
+country_event = {
+	id = scandinavia.7
+	title = scandinavia.7.t
+	desc = scandinavia.7.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = scandinavia.7.a
+		create_wargoal = {
+			type = take_state_focus
+			target = DEN
+			generator = { 99 }
+		}
+	}
+}
+
+# Sweden Yields
+country_event = {
+	id = scandinavia.8
+	title = scandinavia.8.t
+	desc = scandinavia.8.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = scandinavia.8.a
+		transfer_state = 666
+	}
+}
+
+# Sweden Resists
+country_event = {
+	id = scandinavia.9
+	title = scandinavia.9.t
+	desc = scandinavia.9.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = scandinavia.9.a
+		create_wargoal = {
+			type = take_state_focus
+			target = SWE
+			generator = { 666 }
+		}
+	}
+}
+
+# UK pressuring Denmark
+country_event = {
+	id = scandinavia.11
+	title = scandinavia.11.t
+	desc = scandinavia.11.d
+	picture = GFX_uk_standin
+	
+	trigger = {
+		OR = {
+			tag = GER
+			tag = SOV
+		}
+		NOT = { has_country_flag = scandinavia_pro_ENG }
+		NOT = { has_country_flag = scandinavia_anti_ENG }
+		ENG = {
+			NOT = { has_completed_focus = DIP_ENG_scandinavia_1 }
+			focus_progress = {
+				focus = DIP_ENG_scandinavia_1
+				progress > 0.1
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = { # let it slide
+		name = scandinavia.11.a
+		set_country_flag = scandinavia_pro_ENG
+	}
+	
+	option = { # guarantee Denmark
+		name = scandinavia.11.b
+		set_country_flag = scandinavia_anti_ENG
+		if = {
+			limit = {
+				NOT = { has_guaranteed = DEN }
+			}
+			give_guarantee = DEN
+		}
+	}
+}
+
+# Germany pressuring Denmark
+country_event = {
+	id = scandinavia.12
+	title = scandinavia.12.t
+	desc = scandinavia.12.d
+	picture = GFX_germany_standin
+	
+	trigger = {
+		OR = {
+			tag = ENG
+			tag = SOV
+		}
+		NOT = { has_country_flag = scandinavia_pro_GER }
+		NOT = { has_country_flag = scandinavia_anti_GER }
+		GER = {
+			NOT = { has_completed_focus = DIP_GER_scandinavia_1 }
+			focus_progress = {
+				focus = DIP_GER_scandinavia_1
+				progress > 0.1
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = { # let it slide
+		name = scandinavia.12.a
+		set_country_flag = scandinavia_pro_GER
+	}
+	
+	option = { # guarantee Denmark
+		name = scandinavia.12.b
+		set_country_flag = scandinavia_anti_GER
+		if = {
+			limit = {
+				NOT = { has_guaranteed = DEN }
+			}
+			give_guarantee = DEN
+		}
+	}
+}
+
+# Russia pressuring Sweden
+country_event = {
+	id = scandinavia.13
+	title = scandinavia.13.t
+	desc = scandinavia.13.d
+	picture = GFX_russia_standin
+	
+	trigger = {
+		OR = {
+			tag = ENG
+			tag = GER
+		}
+		NOT = { has_country_flag = scandinavia_pro_SOV }
+		NOT = { has_country_flag = scandinavia_anti_SOV }
+		SOV = {
+			NOT = { has_completed_focus = DIP_SOV_scandinavia_1 }
+			focus_progress = {
+				focus = DIP_SOV_scandinavia_1
+				progress > 0.1
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = { # let it slide
+		name = scandinavia.13.a
+		set_country_flag = scandinavia_pro_SOV
+	}
+	
+	option = { # guarantee Sweden
+		name = scandinavia.13.b
+		set_country_flag = scandinavia_anti_SOV
+		if = {
+			limit = {
+				NOT = { has_guaranteed = SWE }
+			}
+			give_guarantee = SWE
+		}
+	}
+}
