@@ -24,7 +24,7 @@ set_technology = {
 }
 
 add_ideas = {
-#	great_power
+	great_power
 }
 
 set_politics = {

@@ -6,7 +6,7 @@ set_research_slots = 3
 
 add_ideas = {
 	limited_conscription
-#	great_power
+	great_power
 }
 
 set_technology = {

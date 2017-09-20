@@ -68,10 +68,8 @@ set_politics = {
 
 add_ideas = {
 	limited_conscription
-#	great_power
+	great_power
 }
-
-#give_guarantee = CZE
 
 #Order matters here Daladier will start as leaders because added last
 create_country_leader = {

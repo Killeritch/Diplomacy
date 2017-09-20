@@ -88,7 +88,7 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
-#	great_power
+	great_power
 }
 
 create_country_leader = {

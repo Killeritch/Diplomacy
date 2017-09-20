@@ -1,0 +1,27 @@
+ideas = {
+
+	country = {
+
+		great_power = {
+			
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				generate_wargoal_tension = -1
+				join_faction_tension = -1
+				lend_lease_tension = -1
+				send_volunteers_tension = -1
+				guarantee_tension = -1
+			}
+			
+			rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+}
