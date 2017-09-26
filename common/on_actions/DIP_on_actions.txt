@@ -2,9 +2,9 @@ on_actions = {
 	on_startup = {
 		effect = {
 			#Startup events
-			#every_country = {
-			#	country_event = startup.10
-			#}
+			every_country = {
+				country_event = startup.10
+			}
 		}
 	}
 }

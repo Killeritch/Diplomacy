@@ -45,4 +45,60 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = ENG_home_defence
+		icon = GFX_goal_generic_national_unity
+		x = 6
+		y = 0
+		cost = 10
+		completion_reward = {
+			# Sussex
+			127 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					#Dover
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 3501
+						instant_build = yes
+					}
+					#Portsmouth
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 9458
+						instant_build = yes
+					}
+				}								
+			}
+			# Greater London Area
+			126 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					#London
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 11374
+						instant_build = yes
+					}
+				}
+			}
+			# Cornwall
+			123 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					#Plymouth
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 540
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
 }

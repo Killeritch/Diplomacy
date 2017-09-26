@@ -121,3 +121,105 @@ country_event = {
 		}
 	}
 }
+
+# Request Balearic Islands from Spain
+country_event = {
+	id = italy.9
+	title = italy.9.t
+	desc = italy.9.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = italy.9.a
+		country_event = { id = italy.10 }
+		effect_tooltip = {
+			ITA = { transfer_state = 177 }
+		}
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = ITA }
+					OR = {
+						has_guaranteed = SPR
+						is_in_faction_with = SPR
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+	}
+	option = {
+		name = italy.9.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = ITA
+						ITA = { is_faction_leader = yes }
+					}
+					is_historical_focus_on = yes
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = ITA }
+								has_guaranteed = SPR
+							} 
+						}
+					}
+				}
+			}
+		}
+		country_event = { id = italy.11 }
+		effect_tooltip = {
+			ITA = { add_state_claim = 177 }
+		}
+	}
+}
+
+# Spain Gives Up Balearic Islands
+country_event = {
+	id = italy.10
+	title = italy.10.t
+	desc = italy.10.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = italy.10.a
+		ITA = { transfer_state = 177 }
+	}
+}
+
+# Spain Refuses to Give Up Islands
+country_event = {
+	id = italy.11
+	title = italy.11.t
+	desc = italy.11.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = italy.11.a
+		create_wargoal = {
+			type = take_state_focus
+			target = SPR
+			generator = { 177 }
+		}
+	}
+}

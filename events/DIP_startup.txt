@@ -20,7 +20,6 @@ country_event = {
 			tag = SOV
 			tag = TUR
 		}
-		is_ai = no
 	}
 	
 	is_triggered_only = yes
@@ -60,7 +59,6 @@ country_event = {
 			tag = SOV
 			tag = TUR
 		}
-		is_ai = no
 	}
 	
 	is_triggered_only = yes
@@ -100,7 +98,6 @@ country_event = {
 			tag = SOV
 			tag = TUR
 		}
-		is_ai = no
 	}
 	
 	is_triggered_only = yes
@@ -140,7 +137,6 @@ country_event = {
 			tag = SOV
 			tag = TUR
 		}
-		is_ai = no
 	}
 	
 	is_triggered_only = yes
@@ -180,7 +176,6 @@ country_event = {
 			tag = SOV
 			tag = TUR
 		}
-		is_ai = no
 	}
 	
 	is_triggered_only = yes
@@ -220,7 +215,6 @@ country_event = {
 			tag = ITA
 			tag = TUR
 		}
-		is_ai = no
 	}
 	
 	is_triggered_only = yes
@@ -260,7 +254,6 @@ country_event = {
 			tag = ITA
 			tag = SOV
 		}
-		is_ai = no
 	}
 	
 	is_triggered_only = yes

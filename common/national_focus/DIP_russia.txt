@@ -45,4 +45,130 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = SOV_improve_stalin_line
+		icon = GFX_goal_generic_fortify_city
+		available = { has_offensive_war = no }
+		x = 6
+		y = 0
+		cost = 10
+		
+		completion_reward = {
+			209 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 6
+						province = 415
+						instant_build = yes
+					}
+				}
+				#add_building_construction = {
+				#	type = bunker
+				#	level = 6
+				#	province = 209
+				#	instant_build = yes
+				#}
+			}
+			210 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 3333
+						instant_build = yes
+					}
+				}
+			}
+			207 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 3219
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 6371
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 6220
+						instant_build = yes
+					}
+				}
+			}
+			206 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 11370
+						instant_build = yes
+					}
+				}
+			}
+			202 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 7
+						province = 525
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 7
+						province = 3494
+						instant_build = yes
+					}
+				}
+
+			}
+			203 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 7
+						province = 11409
+						instant_build = yes
+					}
+				}
+			}
+			192 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 754
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 741
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 11670
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
 }
