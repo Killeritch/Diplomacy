@@ -12,22 +12,22 @@ focus_tree = {
 	
 	default = no
 	
-#	focus = {
-#		id = DIP_ENG_benelux_1
-#		icon = GFX_goal_demand_sudetenland
-#		will_lead_to_war_with = HOL
-#		x = 2
-#		y = 0
-#		cost = 10
-#		
-#		available_if_capitulated = no
-#
-#		completion_reward = {
-#			HOL = {
-#				country_event = { id = benelux.1 days = 1 }
-#			}
-#		}
-#	}
+	focus = {
+		id = DIP_ENG_benelux_1
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = HOL
+		x = 2
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = no
+
+		completion_reward = {
+			HOL = {
+				country_event = { id = benelux.1 days = 1 }
+			}
+		}
+	}
 	
 	focus = {
 		id = DIP_ENG_scandinavia_1
