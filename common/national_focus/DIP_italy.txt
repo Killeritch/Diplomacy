@@ -68,7 +68,7 @@ focus_tree = {
 		cost = 10
 		
 		available = {
-			158 = { is_owned_by = ITA }
+			158 = { is_controlled_by = ITA }
 		}
 		
 		completion_reward = {
@@ -106,6 +106,74 @@ focus_tree = {
 						province = 11891
 						instant_build = yes
 					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_ITA_fortify_AUS
+		icon = GFX_goal_generic_construct_military
+		x = 10
+		y = 0
+		cost = 10
+		
+		available = {
+			159 = { is_controlled_by = ITA }
+			160 = { is_controlled_by = ITA }
+		}
+		
+		completion_reward = {
+			159 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11568
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11587
+					instant_build = yes
+				}
+			}
+			160 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 603
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 628
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3604
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3657
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6656
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9613
+					instant_build = yes
 				}
 			}
 		}

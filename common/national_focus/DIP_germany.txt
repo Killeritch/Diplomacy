@@ -118,4 +118,344 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = DIP_GER_fortify_SOV_2
+		icon = GFX_goal_generic_construct_military
+		x = 6
+		y = 1
+		prerequisite = { focus = DIP_GER_fortify_SOV_1 }
+		cost = 10
+		
+		available = {
+			67 = { is_controlled_by = GER }
+			85 = { is_controlled_by = GER }
+			86 = { is_controlled_by = GER }
+		}
+		completion_reward = {
+			67 = {
+				add_building_construction = {
+					type = bunker
+					province = 479
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 506
+					level = 2
+					instant_build = yes
+				}
+			}
+			85 = {
+				add_building_construction = {
+					type = bunker
+					province = 3295
+					level = 2
+					instant_build = yes
+				}
+			}
+			86 = {
+				add_building_construction = {
+					type = bunker
+					province = 17
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 243
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3381
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9532
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11558
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_GER_fortify_AUS_1
+		icon = GFX_goal_generic_construct_military
+		x = 9
+		y = 0
+		cost = 10
+		
+		available = {
+			65 = { is_controlled_by = GER }
+		}
+		completion_reward = {
+			65 = {
+				add_building_construction = {
+					type = bunker
+					province = 573
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3514
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6559
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9441
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9471
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_GER_fortify_AUS_2
+		icon = GFX_goal_generic_construct_military
+		x = 8
+		y = 1
+		prerequisite = { focus = DIP_GER_fortify_AUS_1 }
+		cost = 10
+		
+		available = {
+			66 = { is_controlled_by = GER }
+			67 = { is_controlled_by = GER }
+		}
+		completion_reward = {
+			66 = {
+				add_building_construction = {
+					type = bunker
+					province = 3485
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3545
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6534
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11517
+					level = 2
+					instant_build = yes
+				}
+			}
+			67 = {
+				add_building_construction = {
+					type = bunker
+					province = 6464
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6512
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9457
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_GER_fortify_AUS_3
+		icon = GFX_goal_generic_construct_military
+		x = 10
+		y = 1
+		prerequisite = { focus = DIP_GER_fortify_AUS_1 }
+		cost = 10
+		
+		available = {
+			50 = { is_controlled_by = GER }
+			52 = { is_controlled_by = GER }
+			53 = { is_controlled_by = GER }
+			54 = { is_controlled_by = GER }
+		}
+		completion_reward = {
+		
+			50 = {
+				add_building_construction = {
+					type = bunker
+					province = 9655
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			52 = {
+				add_building_construction = {
+					type = bunker
+					province = 707
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3688
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9652
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11620
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11638
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			53 = {
+				add_building_construction = {
+					type = bunker
+					province = 532
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 586
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3571
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6725
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9681
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11497
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			54 = {
+				add_building_construction = {
+					type = bunker
+					province = 11404
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_GER_fortify_FRA
+		icon = GFX_goal_generic_construct_military
+		x = 12
+		y = 0
+		cost = 10
+		
+		available = {
+			28 = { is_controlled_by = GER }
+		}
+		completion_reward = {
+		
+			28 = {
+				add_building_construction = {
+					type = bunker
+					province = 678
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 1346
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3629
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6529
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9559
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11502
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
 }

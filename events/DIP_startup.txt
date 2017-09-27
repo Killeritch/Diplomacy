@@ -40,6 +40,12 @@ country_event = {
 			type = annex_everything
 			target = AUS
 		}
+		AUS = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
 	}
 }
 
@@ -78,6 +84,12 @@ country_event = {
 		create_wargoal = {
 			type = annex_everything
 			target = ENG
+		}
+		ENG = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
 		}
 	}
 }
@@ -118,6 +130,12 @@ country_event = {
 			type = annex_everything
 			target = FRA
 		}
+		FRA = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
 	}
 }
 
@@ -156,6 +174,12 @@ country_event = {
 		create_wargoal = {
 			type = annex_everything
 			target = GER
+		}
+		GER = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
 		}
 	}
 }
@@ -196,6 +220,12 @@ country_event = {
 			type = annex_everything
 			target = ITA
 		}
+		ITA = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
 	}
 }
 
@@ -235,6 +265,12 @@ country_event = {
 			type = annex_everything
 			target = SOV
 		}
+		SOV = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
 	}
 }
 
@@ -273,6 +309,12 @@ country_event = {
 		create_wargoal = {
 			type = annex_everything
 			target = TUR
+		}
+		TUR = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
 		}
 	}
 }

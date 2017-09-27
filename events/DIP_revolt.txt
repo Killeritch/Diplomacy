@@ -1,0 +1,192 @@
+﻿###########################
+# DIPLOMACY MOD Revolt Events
+###########################
+
+add_namespace = revolt
+
+#Polish Legion
+country_event = {
+	id = revolt.1
+	title = revolt.1.t
+	desc = revolt.1.d
+	picture = GFX_report_event_polish_army
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_full_control_of_state = 10
+		NOT = { owns_state = 10 }
+		SOV = {
+			owns_state = 10
+			has_war_with = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #sure
+		name = revolt.1.a
+		POL = {
+			transfer_state = 10
+			add_to_war = { targeted_alliance = ROOT enemy = SOV }
+			load_OOB = POL_legions
+			add_ideas = freedom_fighters
+			if = {
+				limit = {
+					85 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 85
+			}
+			if = {
+				limit = {
+					86 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 86
+			}
+			if = {
+				limit = {
+					87 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 87
+			}
+			if = {
+				limit = {
+					88 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 88
+			}
+			if = {
+				limit = {
+					89 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 89
+			}
+			if = {
+				limit = {
+					90 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 90
+			}
+			if = {
+				limit = {
+					91 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 91
+			}
+			if = {
+				limit = {
+					92 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 92
+			}
+			if = {
+				limit = {
+					93 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 93
+			}
+			if = {
+				limit = {
+					94 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 94
+			}
+			if = {
+				limit = {
+					95 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 95
+			}
+			if = {
+				limit = {
+					96 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 96
+			}
+			if = {
+				limit = {
+					97 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 97
+			}
+			if = {
+				limit = {
+					98 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 98
+			}
+		}
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			add_to_faction = POL
+			else = {
+				give_guarantee = POL
+			}
+		}
+	}
+	
+	option = { #no
+		name = revolt.1.b
+		add_political_power = -50
+	}
+}

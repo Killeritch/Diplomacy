@@ -397,7 +397,7 @@ country_event = {
 	}
 	
 	option = { #alliance against Russia
-		name = alliance.2.g
+		name = alliance.4.g
 		trigger = {
 			OR = {
 				tag = AUS

@@ -28,4 +28,75 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = DIP_AUS_fortify_GER_1
+		icon = GFX_goal_generic_construct_military
+		x = 4
+		y = 0
+		cost = 10
+		
+		available = {
+			69 = { is_controlled_by = AUS }
+		}
+		completion_reward = {
+		
+			69 = {
+				add_building_construction = {
+					type = bunker
+					province = 424
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 469
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3418
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3585
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6470
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9555
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11401
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11414
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11432
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
 }
