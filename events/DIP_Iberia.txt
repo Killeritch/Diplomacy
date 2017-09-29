@@ -309,6 +309,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
+		name = iberia.8.a
 		CAT = {
 			transfer_state = 165
 		}

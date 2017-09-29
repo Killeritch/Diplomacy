@@ -32,7 +32,7 @@ focus_tree = {
 	focus = {
 		id = DIP_AUS_fortify_GER_1
 		icon = GFX_goal_generic_construct_military
-		x = 4
+		x = 5
 		y = 0
 		cost = 10
 		
@@ -93,6 +93,127 @@ focus_tree = {
 				add_building_construction = {
 					type = bunker
 					province = 11432
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_AUS_fortify_SOV_1
+		icon = GFX_goal_generic_construct_military
+		x = 8
+		y = 0
+		cost = 10
+		
+		available = {
+			80 = { is_controlled_by = AUS }
+			91 = { is_controlled_by = AUS }
+		}
+		completion_reward = {
+		
+			80 = {
+				add_building_construction = {
+					type = bunker
+					province = 577
+					level = 2
+					instant_build = yes
+				}
+			}
+			91 = {
+				add_building_construction = {
+					type = bunker
+					province = 438
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 536
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3483
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3562
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9454
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9468
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9558
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_AUS_fortify_SOV_2
+		icon = GFX_goal_generic_construct_military
+		x = 8
+		y = 1
+		prerequisite = { focus = DIP_AUS_fortify_SOV_1 }
+		cost = 10
+		
+		available = {
+			88 = { is_controlled_by = AUS }
+		}
+		completion_reward = {
+			88 = {
+				add_building_construction = {
+					type = bunker
+					province = 442
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6499
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6522
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9427
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11413
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11507
 					level = 2
 					instant_build = yes
 				}

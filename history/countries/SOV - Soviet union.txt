@@ -1,4 +1,4 @@
-﻿capital = 219
+﻿capital = 195
 
 oob = "SOV_1936"
 
@@ -94,7 +94,18 @@ create_country_leader = {
 	desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
 	picture = "Portrait_Soviet_Generic_1.dds"
 	expire = "1953.3.1"
-	ideology = centrism
+	ideology = socialism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Nicholas II"
+	desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+	picture = "Portrait_Russia_Nicholas_II.dds"
+	expire = "1953.3.1"
+	ideology = despotism
 	traits = {
 		
 	}

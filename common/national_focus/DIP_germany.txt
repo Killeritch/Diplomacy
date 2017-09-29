@@ -49,7 +49,7 @@ focus_tree = {
 	focus = {
 		id = DIP_GER_fortify_SOV_1
 		icon = GFX_goal_generic_construct_military
-		x = 6
+		x = 12
 		y = 0
 		cost = 10
 		
@@ -125,7 +125,7 @@ focus_tree = {
 	focus = {
 		id = DIP_GER_fortify_SOV_2
 		icon = GFX_goal_generic_construct_military
-		x = 6
+		x = 12
 		y = 1
 		prerequisite = { focus = DIP_GER_fortify_SOV_1 }
 		cost = 10
@@ -242,7 +242,7 @@ focus_tree = {
 	focus = {
 		id = DIP_GER_fortify_AUS_2
 		icon = GFX_goal_generic_construct_military
-		x = 8
+		x = 10
 		y = 1
 		prerequisite = { focus = DIP_GER_fortify_AUS_1 }
 		cost = 10
@@ -304,7 +304,7 @@ focus_tree = {
 	focus = {
 		id = DIP_GER_fortify_AUS_3
 		icon = GFX_goal_generic_construct_military
-		x = 10
+		x = 8
 		y = 1
 		prerequisite = { focus = DIP_GER_fortify_AUS_1 }
 		cost = 10
@@ -412,7 +412,7 @@ focus_tree = {
 	focus = {
 		id = DIP_GER_fortify_FRA
 		icon = GFX_goal_generic_construct_military
-		x = 12
+		x = 6
 		y = 0
 		cost = 10
 		
