@@ -1,0 +1,37 @@
+﻿division_template = {
+	name = "Pesi Brigáda"		# 'Infantry Brigade'
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		artillery_brigade = { x = 2 y = 0 }
+	}
+}
+
+
+units = {
+	division= {	
+		name = "1. Pesi Brigáda"
+		location = 11542
+		division_template = "Pesi Brigáda"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+}
+
+	######## No notable air force ########
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CZE"
+		}
+		requested_factories = 1
+		progress = 0.38
+		efficiency = 100
+	}
+}

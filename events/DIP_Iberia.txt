@@ -1,0 +1,644 @@
+﻿###########################
+# Iberian Events
+###########################
+
+add_namespace = iberia
+
+# British/Italian ultimatum to Spain (Gibraltar)
+country_event = {
+	id = iberia.1
+	title = iberia.1.t
+	desc = iberia.1.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = iberia.1.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = FROM }
+					OR = {
+						has_guaranteed = SPR
+						is_in_faction_with = SPR
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		FROM = {
+			country_event = { days = 1 id = iberia.4 }
+		}
+		
+	}
+	option = { # Resist
+		name = iberia.1.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = FROM
+						FROM = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = FROM }
+								has_guaranteed = SPR
+							} 
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = SPR
+					generator = { 118 }
+				}
+			}
+			country_event = { days = 1 id = iberia.5 }
+		}
+	}
+}
+
+# French ultimatum to Spain (Navarre)
+country_event = {
+	id = iberia.2
+	title = iberia.2.t
+	desc = iberia.2.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = iberia.2.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = FRA }
+					OR = {
+						has_guaranteed = SPR
+						is_in_faction_with = SPR
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		FRA = {
+			country_event = { days = 1 id = iberia.6 }
+		}
+		
+	}
+	option = { # Resist
+		name = iberia.2.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = FRA
+						FRA = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = FRA }
+								has_guaranteed = SPR
+							} 
+						}
+					}
+				}
+			}
+		}
+		FRA = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = SPR
+					generator = { 172 }
+				}
+			}
+			country_event = { days = 1 id = iberia.7 }
+		}
+	}
+}
+
+# French/Italian ultimatum to Spain (Catalonia)
+country_event = {
+	id = iberia.3
+	title = iberia.3.t
+	desc = iberia.3.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		CAT = {
+			add_state_core = 165
+		}
+	}
+	
+	option = { # Yield
+		name = iberia.3.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = FROM }
+					NOT = { is_in_faction_with = FROM }
+					OR = {
+						has_guaranteed = SPR
+						is_in_faction_with = SPR
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		FROM = {
+			country_event = { days = 1 id = iberia.8 }
+		}
+		
+	}
+	option = { # Resist
+		name = iberia.3.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = FROM
+						FROM = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = FROM }
+								NOT = { is_in_faction_with = FROM }
+								has_guaranteed = SPR
+							} 
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = SPR
+					generator = { 165 }
+				}
+			}
+			country_event = { days = 1 id = iberia.9 }
+		}
+	}
+}
+
+# Spain Yields
+country_event = {
+	id = iberia.4
+	title = iberia.4.t
+	desc = iberia.4.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iberia.4.a
+		transfer_state = 118
+	}
+}
+
+# Spain Resists
+country_event = {
+	id = iberia.5
+	title = iberia.5.t
+	desc = iberia.5.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iberia.5.a
+		create_wargoal = {
+			type = take_state_focus
+			target = SPR
+			generator = { 118 }
+		}
+	}
+}
+
+# Spain Yields
+country_event = {
+	id = iberia.6
+	title = iberia.6.t
+	desc = iberia.6.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iberia.6.a
+		transfer_state = 172
+	}
+}
+
+# Spain Resists
+country_event = {
+	id = iberia.7
+	title = iberia.7.t
+	desc = iberia.7.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iberia.7.a
+		create_wargoal = {
+			type = take_state_focus
+			target = SPR
+			generator = { 172 }
+		}
+	}
+}
+
+# Spain Yields
+country_event = {
+	id = iberia.8
+	title = iberia.8.t
+	desc = iberia.8.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		CAT = {
+			transfer_state = 165
+		}
+		puppet = CAT
+	}
+}
+
+# Spain Resists
+country_event = {
+	id = iberia.9
+	title = iberia.9.t
+	desc = iberia.9.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iberia.9.a
+		create_wargoal = {
+			type = take_state_focus
+			target = SPR
+			generator = { 165 }
+		}
+	}
+}
+
+# Britain wants to ally Portugal
+country_event = {
+	id = iberia.10
+	title = iberia.10.t
+	desc = iberia.10.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { #sure
+		name = iberia.10.a
+		ENG = {
+			country_event = { id = iberia.11 days = 1 }
+		}
+	}
+}
+
+# Portugal agrees to alliance
+country_event = {
+	id = iberia.11
+	title = iberia.11.t
+	desc = iberia.11.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iberia.11.a
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			create_faction = "Allies"
+		}
+		add_to_faction = POR
+	}
+}
+
+# Italian ultimatum to Spain (East Coast)
+country_event = {
+	id = iberia.12
+	title = iberia.12.t
+	desc = iberia.12.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = iberia.12.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = ITA }
+					OR = {
+						has_guaranteed = SPR
+						is_in_faction_with = SPR
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		ITA = {
+			country_event = { days = 1 id = iberia.16 }
+		}
+		
+	}
+	option = { # Resist
+		name = iberia.12.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = ITA
+						ITA = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = ITA }
+								has_guaranteed = SPR
+							} 
+						}
+					}
+				}
+			}
+		}
+		ITA = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = SPR
+					generator = { 118 167 168 173 }
+				}
+			}
+			country_event = { days = 1 id = iberia.17 }
+		}
+	}
+}
+
+# British ultimatum to Spain (Galicia)
+country_event = {
+	id = iberia.13
+	title = iberia.13.t
+	desc = iberia.13.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		GAL = {
+			add_state_core = 171
+		}
+	}
+	
+	option = { # Yield
+		name = iberia.13.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = FROM }
+					NOT = { is_in_faction_with = FROM }
+					OR = {
+						has_guaranteed = SPR
+						is_in_faction_with = SPR
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		FROM = {
+			country_event = { days = 1 id = iberia.18 }
+		}
+		
+	}
+	option = { # Resist
+		name = iberia.13.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = FROM
+						FROM = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = FROM }
+								NOT = { is_in_faction_with = FROM }
+								has_guaranteed = SPR
+							} 
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = SPR
+					generator = { 171 }
+				}
+			}
+			country_event = { days = 1 id = iberia.19 }
+		}
+	}
+}
+
+# Spain Yields
+country_event = {
+	id = iberia.16
+	title = iberia.16.t
+	desc = iberia.16.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iberia.16.a
+		if = {
+			limit = {
+				SPR = {
+					owns_state = 118
+				}
+			}
+			transfer_state = 118
+		}
+		if = {
+			limit = {
+				SPR = {
+					owns_state = 167
+				}
+			}
+			transfer_state = 167
+		}
+		if = {
+			limit = {
+				SPR = {
+					owns_state = 168
+				}
+			}
+			transfer_state = 168
+		}
+		if = {
+			limit = {
+				SPR = {
+					owns_state = 173
+				}
+			}
+			transfer_state = 173
+		}
+	}
+}
+
+# Spain Resists
+country_event = {
+	id = iberia.17
+	title = iberia.17.t
+	desc = iberia.17.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iberia.17.a
+		create_wargoal = {
+			type = take_state_focus
+			target = SPR
+			generator = { 118 167 168 173 }
+		}
+	}
+}
+
+# Spain Yields
+country_event = {
+	id = iberia.18
+	title = iberia.18.t
+	desc = iberia.18.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		GAL = {
+			transfer_state = 171
+		}
+		puppet = GAL
+	}
+}
+
+# Spain Resists
+country_event = {
+	id = iberia.19
+	title = iberia.19.t
+	desc = iberia.19.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iberia.19.a
+		create_wargoal = {
+			type = take_state_focus
+			target = SPR
+			generator = { 171 }
+		}
+	}
+}
+
+# Fate of Spain
+country_event = {
+	id = iberia.20
+	title = iberia.20.t
+	desc = iberia.20.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { #take it all
+	name = iberia.20.a
+		annex_country = { target = SPR }
+	}
+}

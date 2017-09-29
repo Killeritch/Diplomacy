@@ -187,6 +187,139 @@ country_event = {
 	
 	option = { #no
 		name = revolt.1.b
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = -50
+	}
+}
+
+#Czechoslovak Legion
+country_event = {
+	id = revolt.2
+	title = revolt.2.t
+	desc = revolt.2.d
+	picture = GFX_report_event_polish_army
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_full_control_of_state = 9
+		NOT = { owns_state = 9 }
+		AUS = {
+			owns_state = 9
+			has_war_with = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #sure
+		name = revolt.2.a
+		CZE = {
+			transfer_state = 9
+			add_to_war = { targeted_alliance = ROOT enemy = AUS }
+			load_OOB = CZE_legions
+			add_ideas = freedom_fighters
+			if = {
+				limit = {
+					69 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 69
+			}
+			if = {
+				limit = {
+					70 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 70
+			}
+			if = {
+				limit = {
+					71 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 71
+			}
+			if = {
+				limit = {
+					72 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 72
+			}
+			if = {
+				limit = {
+					73 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 73
+			}
+			if = {
+				limit = {
+					74 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 74
+			}
+			if = {
+				limit = {
+					75 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 75
+			}
+			if = {
+				limit = {
+					664 = {
+						is_controlled_by = ROOT
+						NOT = { is_owned_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				set_state_controller = 664
+			}
+		}
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			add_to_faction = CZE
+			else = {
+				give_guarantee = CZE
+			}
+		}
+	}
+	
+	option = { #no
+		name = revolt.2.b
+		ai_chance = {
+			base = 0
+		}
 		add_political_power = -50
 	}
 }

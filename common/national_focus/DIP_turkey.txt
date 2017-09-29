@@ -15,6 +15,7 @@ focus_tree = {
 	focus = {
 		id = DIP_TUR_balkans_1
 		icon = GFX_goal_demand_sudetenland
+		mutually_exclusive = { focus = DIP_TUR_balkans_2 }
 		will_lead_to_war_with = BUL
 		x = 2
 		y = 0
@@ -25,6 +26,187 @@ focus_tree = {
 		completion_reward = {
 			BUL = {
 				country_event = { id = balkans.3 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_TUR_balkans_2
+		icon = GFX_goal_generic_improve_relations
+		mutually_exclusive = { focus = DIP_TUR_balkans_1 }
+		x = 4
+		y = 0
+		cost = 10
+		
+		available = {
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
+		}
+		
+		available_if_capitulated = no
+
+		completion_reward = {
+			BUL = {
+				country_event = { id = balkans.10 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_TUR_africa_1
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = EGY
+		x = 6
+		y = 0
+		cost = 10
+		
+		available = {
+			EGY = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		
+		available_if_capitulated = no
+
+		completion_reward = {
+			EGY = {
+				country_event = { id = africa.1 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_TUR_africa_2
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = LBA
+		x = 6
+		y = 1
+		prerequisite = { focus = DIP_TUR_africa_1 }
+		cost = 10
+		
+		available = {
+			OR = {
+				TUR = {
+					owns_state = 446
+					has_full_control_of_state = 446
+				}
+				EGY = {
+					owns_state = 446
+					has_full_control_of_state = 446
+					is_subject_of = TUR
+				}
+			}
+			LBA = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		
+		available_if_capitulated = no
+
+		completion_reward = {
+			LBA = {
+				country_event = { id = africa.11 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_TUR_fortify_AUS
+		icon = GFX_goal_generic_construct_military
+		x = 8
+		y = 0
+		cost = 10
+		
+		available = {
+			341 = { is_controlled_by = TUR }
+		}
+		completion_reward = {
+		
+			341 = {
+				add_building_construction = {
+					type = bunker
+					province = 849
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 922
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3893
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11842
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_TUR_fortify_SOV
+		icon = GFX_goal_generic_construct_military
+		x = 10
+		y = 0
+		cost = 10
+		
+		available = {
+			353 = { is_controlled_by = TUR }
+			354 = { is_controlled_by = TUR }
+		}
+		completion_reward = {
+		
+			353 = {
+				add_building_construction = {
+					type = bunker
+					province = 4583
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12376
+					level = 2
+					instant_build = yes
+				}
+			}
+			354 = {
+				add_building_construction = {
+					type = bunker
+					province = 7454
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 10403
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 10472
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11753
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}

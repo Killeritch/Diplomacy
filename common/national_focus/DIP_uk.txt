@@ -47,9 +47,83 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = DIP_ENG_iberia_1
+		icon = GFX_goal_generic_improve_relations
+		x = 6
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		available = {
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
+			POR = {
+				exists = yes
+				is_in_faction = no
+			}
+		}
+
+		completion_reward = {
+			POR = {
+				country_event = { id = iberia.10 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_ENG_iberia_2
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = SPR
+		x = 8
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		available = {
+			SPR = {
+				owns_state = 118
+			}
+		}
+
+		completion_reward = {
+			SPR = {
+				country_event = { id = iberia.1 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_ENG_iberia_3
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = SPR
+		x = 6
+		y = 1
+		prerequisite = { focus = DIP_ENG_iberia_1 }
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		available = {
+			SPR = {
+				owns_state = 171
+			}
+		}
+
+		completion_reward = {
+			SPR = {
+				country_event = { id = iberia.13 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
 		id = ENG_home_defence
 		icon = GFX_goal_generic_national_unity
-		x = 6
+		x = 10
 		y = 0
 		cost = 10
 		completion_reward = {

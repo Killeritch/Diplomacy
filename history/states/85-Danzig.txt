@@ -24,5 +24,6 @@ state={
 
 	provinces={
 		279 334 362 389 3295 3324 9263 
+		6347 #from Mazurskie (Plock) - I think maybe the Russian-German looks slightly better this way?
 	}
 }

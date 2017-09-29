@@ -545,3 +545,11 @@ TUN = {
 	color = rgb { 210 15 15 }
 	color_ui = rgb { 210 15 15 }
 }
+CAT = {
+	color = rgb { 252 221 9 }
+	color_ui = rgb { 252 221 9 }
+}
+GAL = {
+	color = rgb { 12 153 204 }
+	color_ui = rgb { 12 153 204 }
+}

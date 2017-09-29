@@ -1,0 +1,429 @@
+﻿###########################
+# Africa Events
+###########################
+
+add_namespace = africa
+
+# Turkish ultimatum to Egypt
+country_event = {
+	id = africa.1
+	title = africa.1.t
+	desc = africa.1.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = africa.1.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = TUR }
+					OR = {
+						has_guaranteed = EGY
+						is_in_faction_with = EGY
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		TUR = {
+			country_event = { days = 1 id = africa.4 }
+		}
+		
+	}
+	option = { # Resist
+		name = africa.1.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = TUR
+						TUR = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = TUR }
+								has_guaranteed = EGY
+							} 
+						}
+					}
+				}
+			}
+		}
+		TUR = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = EGY
+				}
+			}
+			country_event = { days = 1 id = africa.5 }
+		}
+	}
+}
+
+# Italian ultimatum to Tunisia
+country_event = {
+	id = africa.2
+	title = africa.2.t
+	desc = africa.2.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = africa.2.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = ITA }
+					OR = {
+						has_guaranteed = TUN
+						is_in_faction_with = TUN
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		ITA = {
+			country_event = { days = 1 id = africa.6 }
+		}
+		
+	}
+	option = { # Resist
+		name = africa.2.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = ITA
+						ITA = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = ITA }
+								has_guaranteed = TUN
+							} 
+						}
+					}
+				}
+			}
+		}
+		ITA = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = TUN
+				}
+			}
+			country_event = { days = 1 id = africa.7 }
+		}
+	}
+}
+
+# French/British ultimatum to Morocco
+country_event = {
+	id = africa.3
+	title = africa.3.t
+	desc = africa.3.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = africa.3.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = FROM }
+					NOT = { is_in_faction_with = FROM }
+					OR = {
+						has_guaranteed = MOR
+						is_in_faction_with = MOR
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		FROM = {
+			country_event = { days = 1 id = africa.8 }
+		}
+		
+	}
+	option = { # Resist
+		name = africa.3.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = FROM
+						FROM = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = FROM }
+								NOT = { is_in_faction_with = FROM }
+								has_guaranteed = MOR
+							} 
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = MOR
+					generator = { 290 }
+				}
+			}
+			country_event = { days = 1 id = africa.9 }
+		}
+	}
+}
+
+# Egypt Yields
+country_event = {
+	id = africa.4
+	title = africa.4.t
+	desc = africa.4.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.4.a
+		puppet = EGY
+	}
+}
+
+# Egypt Resists
+country_event = {
+	id = africa.5
+	title = africa.5.t
+	desc = africa.5.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.5.a
+		create_wargoal = {
+			type = annex_everything
+			target = EGY
+		}
+	}
+}
+
+# Tunisia Yields
+country_event = {
+	id = africa.6
+	title = africa.6.t
+	desc = africa.6.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.6.a
+		annex_country = { target = TUN }
+	}
+}
+
+# Tunisia Resists
+country_event = {
+	id = africa.7
+	title = africa.7.t
+	desc = africa.7.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.7.a
+		create_wargoal = {
+			type = annex_everything
+			target = TUN
+		}
+	}
+}
+
+# Morocco Yields
+country_event = {
+	id = africa.8
+	title = africa.8.t
+	desc = africa.8.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.8.a
+		transfer_state = 290
+	}
+}
+
+# Morocco Resists
+country_event = {
+	id = africa.9
+	title = africa.9.t
+	desc = africa.9.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.9.a
+		create_wargoal = {
+			type = take_state_focus
+			target = MOR
+			generator = { 290 }
+		}
+	}
+}
+
+# Turkish ultimatum to Libya
+country_event = {
+	id = africa.11
+	title = africa.11.t
+	desc = africa.11.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = africa.11.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = TUR }
+					OR = {
+						has_guaranteed = LBA
+						is_in_faction_with = LBA
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		TUR = {
+			country_event = { days = 1 id = africa.14 }
+		}
+		
+	}
+	option = { # Resist
+		name = africa.11.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = TUR
+						TUR = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = TUR }
+								has_guaranteed = LBA
+							} 
+						}
+					}
+				}
+			}
+		}
+		TUR = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = LBA
+				}
+			}
+			country_event = { days = 1 id = africa.15 }
+		}
+	}
+}
+
+# Libya Yields
+country_event = {
+	id = africa.14
+	title = africa.14.t
+	desc = africa.14.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.14.a
+		puppet = LBA
+	}
+}
+
+# Libya Resists
+country_event = {
+	id = africa.15
+	title = africa.15.t
+	desc = africa.15.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.15.a
+		create_wargoal = {
+			type = annex_everything
+			target = LBA
+		}
+	}
+}

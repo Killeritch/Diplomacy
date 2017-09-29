@@ -47,11 +47,65 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_improve_stalin_line
-		icon = GFX_goal_generic_fortify_city
-		available = { has_offensive_war = no }
+		id = DIP_SOV_fortify_TUR
+		icon = GFX_goal_generic_construct_military
 		x = 6
 		y = 0
+		cost = 10
+		
+		available = {
+			230 = { is_controlled_by = SOV }
+			231 = { is_controlled_by = SOV }
+		}
+		completion_reward = {
+			230 = {
+				add_building_construction = {
+					type = bunker
+					province = 3564
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12320
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12441
+					level = 2
+					instant_build = yes
+				}
+			}
+			231 = {
+				add_building_construction = {
+					type = bunker
+					province = 3653
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3656
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6669
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_improve_stalin_line
+		icon = GFX_goal_generic_fortify_city
+		x = 9
+		y = 3
 		cost = 10
 		
 		completion_reward = {

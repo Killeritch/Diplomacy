@@ -51,11 +51,107 @@ focus_tree = {
 		y = 0
 		cost = 10
 		completion_reward = {
-			random_other_country = {
-				limit = {
-					owns_state = 177
-				}
+			SPR = {
 				country_event = { id = italy.9 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_ITA_iberia_1
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = SPR
+		x = 4
+		y = 1
+		prerequisite = { focus = ITA_demand_balearic_islands }
+		cost = 10
+		
+		available = {
+			owns_state = 177
+			SPR = {
+				owns_state = 165
+			}
+		}
+		
+		bypass = {
+			CAT = {
+				owns_state = 165
+			}
+		}
+		
+		completion_reward = {
+			SPR = {
+				country_event = { id = iberia.3 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_ITA_iberia_2
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = SPR
+		x = 4
+		y = 2
+		prerequisite = { focus = DIP_ITA_iberia_1 }
+		cost = 10
+		
+		available = {
+			owns_state = 177
+			CAT = {
+				owns_state = 165
+				is_subject = yes
+			}
+			SPR = {
+				OR = {
+					owns_state = 118
+					owns_state = 167
+					owns_state = 168
+					owns_state = 173
+				}
+			}
+		}
+		
+		completion_reward = {
+			SPR = {
+				country_event = { id = iberia.12 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_ITA_africa_1
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = TUN
+		x = 6
+		y = 0
+		
+		available = {
+			country_exists = TUN
+		}
+
+		cost = 10
+		completion_reward = {
+			TUN = { country_event = { id = africa.2 } }
+		}
+	}
+	
+	focus = {
+		id = DIP_ITA_africa_2
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = LBA
+		x = 6
+		y = 1
+		prerequisite = { focus = DIP_ITA_africa_1 }
+		
+		available = {
+			country_exists = LBA
+		}
+
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = LBA
 			}
 		}
 	}
