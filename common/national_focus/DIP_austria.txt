@@ -21,6 +21,10 @@ focus_tree = {
 		cost = 10
 		
 		available_if_capitulated = no
+		
+		available = {
+			SER = { owns_state = 107 }
+		}
 
 		completion_reward = {
 			SER = {
@@ -30,9 +34,174 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = DIP_AUS_balkans_2
+		icon = GFX_goal_generic_territory_or_war
+		will_lead_to_war_with = SER
+		x = 2
+		y = 1
+		prerequisite = { focus = DIP_AUS_balkans_1 }
+		cost = 10
+		
+		available = {
+			owns_state = 107
+			SER = { exists = yes }
+		}
+		
+		available_if_capitulated = no
+
+		completion_reward = {
+			SER = {
+				country_event = { id = balkans.11 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_AUS_balkans_3
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = ROM
+		x = 4
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		available = {
+			ROM = { owns_state = 81 }
+		}
+
+		completion_reward = {
+			ROM = {
+				country_event = { id = balkans.12 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_AUS_balkans_4
+		icon = GFX_goal_generic_territory_or_war
+		will_lead_to_war_with = ROM
+		x = 4
+		y = 1
+		prerequisite = { focus = DIP_AUS_balkans_3 }
+		cost = 10
+		
+		available = {
+			owns_state = 81
+			ROM = { exists = yes }
+		}
+		
+		available_if_capitulated = no
+
+		completion_reward = {
+			ROM = {
+				country_event = { id = balkans.13 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_AUS_fortify_ITA_1
+		icon = GFX_goal_generic_construct_military
+		x = 6
+		y = 0
+		cost = 10
+		
+		available = {
+			736 = { is_controlled_by = AUS }
+		}
+		completion_reward = {
+		
+			736 = {
+				add_building_construction = {
+					type = bunker
+					province = 6626
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11595
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_AUS_fortify_ITA_2
+		icon = GFX_goal_generic_construct_military
+		x = 6
+		y = 1
+		prerequisite = { focus = DIP_AUS_fortify_ITA_1 }
+		cost = 10
+		
+		available = {
+			39 = { is_controlled_by = AUS }
+			153 = { is_controlled_by = AUS }
+		}
+		completion_reward = {
+		
+			39 = {
+				add_building_construction = {
+					type = bunker
+					province = 656
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6631
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6675
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9598
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11598
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11615
+					level = 2
+					instant_build = yes
+				}
+			}
+			153 = {
+				add_building_construction = {
+					type = bunker
+					province = 671
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6673
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
 		id = DIP_AUS_fortify_GER_1
 		icon = GFX_goal_generic_construct_military
-		x = 5
+		x = 9
 		y = 0
 		cost = 10
 		
@@ -101,9 +270,195 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = DIP_AUS_fortify_SOV_1
+		id = DIP_AUS_fortify_GER_2
 		icon = GFX_goal_generic_construct_military
 		x = 8
+		y = 1
+		prerequisite = { focus = DIP_AUS_fortify_GER_1 }
+		cost = 10
+		
+		available = {
+			9 = { is_controlled_by = AUS }
+			152 = { is_controlled_by = AUS }
+		}
+		completion_reward = {
+		
+			9 = {
+				add_building_construction = {
+					type = bunker
+					province = 5283
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 7857
+					level = 2
+					instant_build = yes
+				}
+			}
+			152 = {
+				add_building_construction = {
+					type = bunker
+					province = 688
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 732
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3703
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6708
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_AUS_fortify_GER_3
+		icon = GFX_goal_generic_construct_military
+		x = 8
+		y = 2
+		prerequisite = { focus = DIP_AUS_fortify_GER_2 }
+		cost = 10
+		
+		available = {
+			153 = { is_controlled_by = AUS }
+		}
+		completion_reward = {
+		
+			153 = {
+				add_building_construction = {
+					type = bunker
+					province = 673
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3675
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6678
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6680
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9636
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11634
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_AUS_fortify_GER_4
+		icon = GFX_goal_generic_construct_military
+		x = 10
+		y = 1
+		prerequisite = { focus = DIP_AUS_fortify_GER_1 }
+		cost = 10
+		
+		available = {
+			9 = { is_controlled_by = AUS }
+			72 = { is_controlled_by = AUS }
+			74 = { is_controlled_by = AUS }
+			88 = { is_controlled_by = AUS }
+		}
+		completion_reward = {
+		
+			9 = {
+				add_building_construction = {
+					type = bunker
+					province = 445
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 494
+					level = 2
+					instant_build = yes
+				}
+			}
+			72 = {
+				add_building_construction = {
+					type = bunker
+					province = 9567
+					level = 2
+					instant_build = yes
+				}
+			}
+			74 = {
+				add_building_construction = {
+					type = bunker
+					province = 421
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3414
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3583
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6485
+					level = 2
+					instant_build = yes
+				}
+			}
+			88 = {
+				add_building_construction = {
+					type = bunker
+					province = 9412
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_AUS_fortify_SOV_1
+		icon = GFX_goal_generic_construct_military
+		x = 12
 		y = 0
 		cost = 10
 		
@@ -171,7 +526,7 @@ focus_tree = {
 	focus = {
 		id = DIP_AUS_fortify_SOV_2
 		icon = GFX_goal_generic_construct_military
-		x = 8
+		x = 12
 		y = 1
 		prerequisite = { focus = DIP_AUS_fortify_SOV_1 }
 		cost = 10
@@ -216,6 +571,100 @@ focus_tree = {
 					province = 11507
 					level = 2
 					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_AUS_fortify_deep
+		icon = GFX_goal_generic_fortify_city
+		x = 9
+		y = 3
+		prerequisite = {
+			focus = DIP_AUS_fortify_GER_2
+			focus = DIP_AUS_fortify_GER_4
+			focus = DIP_AUS_fortify_ITA_2
+			focus = DIP_AUS_fortify_SOV_2
+		}
+		cost = 10
+
+		available = {
+			4 = { is_controlled_by = AUS }
+		}
+		
+		completion_reward = {
+			4 = {
+				add_building_construction = {
+					type = bunker
+					province = 11666
+					level = 5
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					9 = { is_controlled_by = AUS }
+				}
+				9 = {
+					add_building_construction = {
+						type = bunker
+						province = 11542
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					43 = { is_controlled_by = AUS }
+				}
+				43 = {
+					add_building_construction = {
+						type = bunker
+						province = 9660
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					70 = { is_controlled_by = AUS }
+				}
+				70 = {
+					add_building_construction = {
+						type = bunker
+						province = 9692
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					104 = { is_controlled_by = AUS }
+				}
+				104 = {
+					add_building_construction = {
+						type = bunker
+						province = 11899
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					109 = { is_controlled_by = AUS }
+				}
+				109 = {
+					add_building_construction = {
+						type = bunker
+						province = 11581
+						level = 4
+						instant_build = yes
+					}
 				}
 			}
 		}
