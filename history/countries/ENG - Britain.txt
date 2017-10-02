@@ -270,7 +270,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Robert Gascoyne-Cecil, Lord Salisbury"
+	name = "Lord Salisbury"
 	desc = "POLITICS_STANLEY_BALDWIN_DESC"
 	picture = "Portrait_UK_Lord_Salisbury.dds"
 	expire = "1938.1.1"

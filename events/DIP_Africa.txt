@@ -395,6 +395,153 @@ country_event = {
 	}
 }
 
+# French ultimatum to Algeria
+country_event = {
+	id = africa.12
+	title = africa.12.t
+	desc = africa.12.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = africa.12.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = ITA }
+					OR = {
+						has_guaranteed = ALG
+						is_in_faction_with = ALG
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		ITA = {
+			country_event = { days = 1 id = africa.16 }
+		}
+		
+	}
+	option = { # Resist
+		name = africa.12.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = ITA
+						ITA = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = ITA }
+								has_guaranteed = ALG
+							} 
+						}
+					}
+				}
+			}
+		}
+		ITA = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = ALG
+				}
+			}
+			country_event = { days = 1 id = africa.17 }
+		}
+	}
+}
+
+# French ultimatum to Algeria
+country_event = {
+	id = africa.13
+	title = africa.13.t
+	desc = africa.13.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = { # Yield
+		name = africa.13.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0				
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = FROM }
+					NOT = { is_in_faction_with = FROM }
+					OR = {
+						has_guaranteed = ALG
+						is_in_faction_with = ALG
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		FROM = {
+			country_event = { days = 1 id = africa.18 }
+		}
+		
+	}
+	option = { # Resist
+		name = africa.13.b
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction_with = FROM
+						FROM = { is_faction_leader = yes }
+					}
+					AND = {
+						is_in_faction = no 
+						NOT = {
+							any_other_country = {
+								NOT = { tag = FROM }
+								NOT = { is_in_faction_with = FROM }
+								has_guaranteed = ALG
+							} 
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = ALG
+					generator = { 459 }
+				}
+			}
+			country_event = { days = 1 id = africa.19 }
+		}
+	}
+}
+
 # Libya Yields
 country_event = {
 	id = africa.14
@@ -424,6 +571,73 @@ country_event = {
 		create_wargoal = {
 			type = annex_everything
 			target = LBA
+		}
+	}
+}
+
+# Algeria Yields
+country_event = {
+	id = africa.16
+	title = africa.16.t
+	desc = africa.16.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.16.a
+		annex_country = { target = ALG }
+	}
+}
+
+# Algeria Resists
+country_event = {
+	id = africa.17
+	title = africa.17.t
+	desc = africa.17.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.17.a
+		create_wargoal = {
+			type = annex_everything
+			target = ALG
+		}
+	}
+}
+
+# Algeria Yields
+country_event = {
+	id = africa.18
+	title = africa.18.t
+	desc = africa.18.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.18.a
+		transfer_state = 459
+	}
+}
+
+# Algeria Resists
+country_event = {
+	id = africa.19
+	title = africa.19.t
+	desc = africa.19.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = africa.19.a
+		create_wargoal = {
+			type = take_state_focus
+			target = ALG
+			generator = { 459 }
 		}
 	}
 }

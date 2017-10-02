@@ -102,7 +102,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_improve_stalin_line
+		id = DIP_SOV_fortify_deep
 		icon = GFX_goal_generic_fortify_city
 		x = 9
 		y = 3

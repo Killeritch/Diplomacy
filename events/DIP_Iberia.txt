@@ -642,4 +642,9 @@ country_event = {
 	name = iberia.20.a
 		annex_country = { target = SPR }
 	}
+	
+	option = { #puppet it all 
+	name = iberia.20.b
+		puppet = SPR
+	}
 }

@@ -325,6 +325,54 @@ country_event = {
 	}
 }
 
+# Ottomans offer Bulgaria an alliance
+country_event = {
+	id = balkans.10
+	title = balkans.10.t
+	desc = balkans.10.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = { # sure
+		name = balkans.10.a
+		TUR = {
+			country_event = { id = balkans.20 days = 1 }
+		}
+	}
+	
+	option = { # no
+		name = balkans.10.b
+		ai_chance = {
+			base = 0
+		}
+		TUR = {
+			country_event = { id = balkans.30 days = 1 }
+		}
+	}
+}
+
+# Bulgaria accepts alliance offer
+country_event = {
+	id = balkans.20
+	title = balkans.20.t
+	desc = balkans.20.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = balkans.20.a
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			create_faction = "Istanbul Pact"
+		}
+		add_to_faction = BUL
+	}
+}
+
 # Austrian ambitions in the Balkans
 country_event = {
 	id = balkans.25
@@ -358,5 +406,19 @@ country_event = {
 			factor = 30
 		}
 		name = balkans.25.a
+	}
+}
+
+# Bulgaria rejects alliance offer
+country_event = {
+	id = balkans.30
+	title = balkans.30.t
+	desc = balkans.30.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = balkans.30.a
 	}
 }

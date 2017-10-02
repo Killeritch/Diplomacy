@@ -100,7 +100,10 @@ focus_tree = {
 				owns_state = 165
 				CAT = {
 					owns_state = 165
-					is_subject_of = FRA
+					OR = {
+						is_subject_of = FRA
+						is_in_faction_with = FRA
+					}
 				}
 			}
 			SPR = { exists = yes }
@@ -114,9 +117,300 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = DIP_FRA_africa_1
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = ALG
+		x = 6
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		available = {
+			ALG = { owns_state = 459 }
+		}
+		
+		completion_reward = {
+			ALG = {
+				country_event = { id = africa.13 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_FRA_africa_2
+		icon = GFX_goal_generic_territory_or_war
+		will_lead_to_war_with = ALG
+		x = 6
+		y = 1
+		prerequisite = { focus = DIP_FRA_africa_1 }
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		available = {
+			ALG = { exists = yes }
+		}
+		
+		completion_reward = {
+			ALG = {
+				country_event = { id = africa.12 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_FRA_africa_3
+		icon = GFX_goal_demand_sudetenland
+		will_lead_to_war_with = MOR
+		x = 5
+		y = 3
+		prerequisite = { focus = DIP_FRA_africa_2 focus = DIP_FRA_iberia_3 }
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		available = {
+			MOR = { owns_state = 290 }
+			OR = {
+				owns_state = 459
+				owns_state = 118
+			}
+		}
+		
+		completion_reward = {
+			MOR = {
+				country_event = { id = africa.3 days = 1 }
+			}
+		}
+	}	
+	
+	focus = {
+		id = DIP_FRA_fortify_ENG_1
+		icon = GFX_focus_generic_coastal_fort
+		x = 8
+		y = 0
+		cost = 10
+		
+		available = {
+			14 = { is_controlled_by = FRA }
+			15 = { is_controlled_by = FRA }
+			29 = { is_controlled_by = FRA }
+		}
+		completion_reward = {
+			14 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 3552
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6572
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9525
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11508
+					level = 1
+					instant_build = yes
+				}
+			}
+			15 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 485
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 3579
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6449
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6599
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9550
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9434
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11535
+					level = 1
+					instant_build = yes
+				}
+			}
+			29 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 575
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9500
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11420
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11548
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DIP_FRA_fortify_ENG_2
+		icon = GFX_focus_generic_coastal_fort
+		x = 8
+		y = 1
+		prerequisite = { focus = DIP_FRA_fortify_ENG_1 }
+		cost = 10
+		
+		available = {
+			14 = { is_controlled_by = FRA }
+			19 = { is_controlled_by = FRA }
+			23 = { is_controlled_by = FRA }
+			30 = { is_controlled_by = FRA }
+		}
+		completion_reward = {
+			14 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 542
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6536
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9510
+					level = 2
+					instant_build = yes
+				}
+			}
+			19 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 743
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6621
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6777
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9710
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9737
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11565
+					level = 1
+					instant_build = yes
+				}
+			}
+			23 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6657
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9597
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11600
+					level = 1
+					instant_build = yes
+				}
+			}
+			30 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11465
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11616
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
 		id = FRA_alpine_forts
 		icon = GFX_goal_generic_construct_military
-		x = 6
+		x = 10
 		y = 0
 		cost = 10
 
@@ -175,7 +469,7 @@ focus_tree = {
 	focus = {
 		id = DIP_FRA_fortify_GER
 		icon = GFX_goal_generic_construct_military
-		x = 8
+		x = 12
 		y = 0
 		cost = 10
 		
@@ -218,7 +512,7 @@ focus_tree = {
 	focus = {
 		id = FRA_extend_the_maginot_line
 		icon = GFX_goal_generic_fortify_city
-		x = 8
+		x = 12
 		y = 1
 		prerequisite = { focus = DIP_FRA_fortify_GER }
 		cost = 10

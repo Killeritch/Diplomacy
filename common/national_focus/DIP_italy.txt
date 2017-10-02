@@ -16,7 +16,7 @@ focus_tree = {
 		id = ITA_albania_war_goal
 		icon = GFX_goal_generic_more_territorial_claims
 		will_lead_to_war_with = ALB
-		x = 2
+		x = 4
 		y = 0
 		
 		available = {
@@ -47,7 +47,7 @@ focus_tree = {
 				owns_state = 177
 			}
 		}
-		x = 4
+		x = 2
 		y = 0
 		cost = 10
 		completion_reward = {
@@ -61,7 +61,7 @@ focus_tree = {
 		id = DIP_ITA_iberia_1
 		icon = GFX_goal_demand_sudetenland
 		will_lead_to_war_with = SPR
-		x = 4
+		x = 2
 		y = 1
 		prerequisite = { focus = ITA_demand_balearic_islands }
 		cost = 10
@@ -90,7 +90,7 @@ focus_tree = {
 		id = DIP_ITA_iberia_2
 		icon = GFX_goal_demand_sudetenland
 		will_lead_to_war_with = SPR
-		x = 4
+		x = 2
 		y = 2
 		prerequisite = { focus = DIP_ITA_iberia_1 }
 		cost = 10

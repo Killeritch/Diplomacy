@@ -26,6 +26,7 @@ set_technology = {
 add_ideas = {
 	great_power
 }
+set_cosmetic_tag = HUN_EMPIRE
 
 set_politics = {
 

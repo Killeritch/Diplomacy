@@ -55,6 +55,8 @@
  DIP_ITA_iberia_2:0 "Demand Eastern Spain"
  DIP_ITA_iberia_2_desc:0 "To ensure Italian control over Mare Nostrum, we must secure the east coast of Spain before the French or British can take it from us."
  DIP_SOV_balkans_1:0 "Demand Moldavia"
+ DIP_SOV_fortify_deep:0 "Defence in Depth"
+ DIP_SOV_fortify_deep_desc:0 "Russia's borders are far too vast to be able to reliably defend them all. We should fortify some strategic cities to hold out in case the enemy breaks through."
  DIP_SOV_fortify_TUR:0 "Fortify the Caucasus"
  DIP_SOV_fortify_TUR_desc:0 "To the west of our Caucasian lands is our old enemy, Turkey. We should build forts in Georgia and Armenia to defend against a possible attack."
  DIP_SOV_scandinavia_1:0 "Demand Lappland"
