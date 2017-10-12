@@ -355,6 +355,13 @@ country_event = {
 	option = { # let it slide
 		name = benelux.11.a
 		set_country_flag = benelux_pro_ENG
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_war_with = ENG
+			}
+		}
 	}
 	
 	option = { # guarantee Netherlands
@@ -365,6 +372,17 @@ country_event = {
 				NOT = { has_guaranteed = HOL }
 			}
 			give_guarantee = HOL
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.1
+				surrender_progress > 0.1
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = ENG
+			}
 		}
 	}
 }
@@ -399,6 +417,13 @@ country_event = {
 	option = { # let it slide
 		name = benelux.12.a
 		set_country_flag = benelux_pro_FRA
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_war_with = FRA
+			}
+		}
 	}
 	
 	option = { # guarantee Belgium
@@ -409,6 +434,17 @@ country_event = {
 				NOT = { has_guaranteed = BEL }
 			}
 			give_guarantee = BEL
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.1
+				surrender_progress > 0.1
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = FRA
+			}
 		}
 	}
 }
@@ -443,6 +479,13 @@ country_event = {
 	option = { # let it slide
 		name = benelux.13.a
 		set_country_flag = benelux_pro_GER
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_war_with = GER
+			}
+		}
 	}
 	
 	option = { # guarantee Netherlands
@@ -453,6 +496,1106 @@ country_event = {
 				NOT = { has_guaranteed = HOL }
 			}
 			give_guarantee = HOL
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.1
+				surrender_progress > 0.1
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = GER
+			}
+		}
+	}
+}
+
+# FROM rejects our partition proposal
+country_event = {
+	id = benelux.20
+	title = benelux.20.t
+	desc = benelux.20.d
+	picture = GFX_uk_standin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.20.a
+	}
+}
+
+# UK: both Germany & France side with us
+country_event = {
+	id = benelux.21
+	title = benelux.21.t
+	desc = benelux.21.d
+	picture = GFX_uk_standin
+	
+	trigger = {
+		tag = ENG
+		FRA = { has_country_flag = benelux_pro_ENG }
+		GER = { has_country_flag = benelux_pro_ENG }
+		NOT = { has_global_flag = benelux_ENG_FRA_deal }
+		NOT = { has_global_flag = benelux_ENG_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # side with France
+		name = benelux.21.a
+		FRA = {
+			country_event = { id = benelux.25 days = 7 }
+		}
+	}
+	
+	option = { # side with Germany
+		name = benelux.21.b
+		GER = {
+			country_event = { id = benelux.26 days = 7 }
+		}
+	}
+	
+	option = { # nah we're good
+		name = benelux.21.c
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# UK: only France sides with us
+country_event = {
+	id = benelux.22
+	title = benelux.22.t
+	desc = benelux.22.d
+	picture = GFX_uk_standin
+	
+	trigger = {
+		tag = ENG
+		FRA = { has_country_flag = benelux_pro_ENG }
+		GER = { has_country_flag = benelux_anti_ENG }
+		NOT = { has_global_flag = benelux_ENG_FRA_deal }
+		NOT = { has_global_flag = benelux_ENG_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # side with France
+		name = benelux.22.a
+		FRA = {
+			country_event = { id = benelux.25 days = 7 }
+		}
+	}
+	
+	option = { # nah we're good
+		name = benelux.22.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# UK: only Germany sides with us
+country_event = {
+	id = benelux.23
+	title = benelux.23.t
+	desc = benelux.23.d
+	picture = GFX_uk_standin
+	
+	trigger = {
+		tag = ENG
+		FRA = { has_country_flag = benelux_anti_ENG }
+		GER = { has_country_flag = benelux_pro_ENG }
+		NOT = { has_global_flag = benelux_ENG_FRA_deal }
+		NOT = { has_global_flag = benelux_ENG_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # side with Germany
+		name = benelux.23.a
+		GER = {
+			country_event = { id = benelux.26 days = 7 }
+		}
+	}
+	
+	option = { # nah we're good
+		name = benelux.23.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# UK: no one sides with us
+country_event = {
+	id = benelux.24
+	title = benelux.24.t
+	desc = benelux.24.d
+	picture = GFX_uk_standin
+	
+	trigger = {
+		tag = ENG
+		FRA = { has_country_flag = benelux_anti_ENG }
+		GER = { has_country_flag = benelux_anti_ENG }
+		NOT = { has_global_flag = benelux_ENG_FRA_deal }
+		NOT = { has_global_flag = benelux_ENG_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # boo hoo
+		name = benelux.24.a
+	}
+}
+
+# UK offers to split Benelux with France
+country_event = {
+	id = benelux.25
+	title = benelux.25.t
+	desc = benelux.25.d
+	picture = GFX_uk_standin
+	
+	is_triggered_only = yes
+
+	option = { # let's do this
+		name = benelux.25.a
+		set_global_flag = benelux_ENG_FRA_deal
+		GER = {
+			country_event = { id = benelux.47 days = 7 }
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_global_flag = benelux_FRA_GER_deal
+			}
+		}
+	}
+	
+	option = { # nah
+		name = benelux.25.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = benelux_FRA_GER_deal }
+			}
+		}
+		FROM = {
+			country_event = { id = benelux.20 days = 7 }
+		}
+	}
+}
+
+# UK offers to split Benelux with Germany
+country_event = {
+	id = benelux.26
+	title = benelux.26.t
+	desc = benelux.26.d
+	picture = GFX_uk_standin
+	
+	is_triggered_only = yes
+
+	option = { # let's do this
+		name = benelux.26.a
+		set_global_flag = benelux_ENG_GER_deal
+		FRA = {
+			country_event = { id = benelux.37 days = 7 }
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_global_flag = benelux_FRA_GER_deal
+			}
+		}
+	}
+	
+	option = { # nah
+		name = benelux.26.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = benelux_FRA_GER_deal }
+			}
+		}
+		FROM = {
+			country_event = { id = benelux.20 days = 7 }
+		}
+	}
+}
+
+# UK: France & Germany plot to partition Benelux
+country_event = {
+	id = benelux.27
+	title = benelux.27.t
+	desc = benelux.27.d
+	picture = GFX_uk_standin
+	
+	is_triggered_only = yes
+	
+	option = { # oppose them
+		name = benelux.27.a
+		ai_chance = {
+			base = 10
+		}
+		give_guarantee = BEL
+		give_guarantee = HOL
+		give_guarantee = LUX
+		FRA = {
+			country_event = { id = benelux.28 days = 7 }
+		}
+		GER = {
+			country_event = { id = benelux.28 days = 7 }
+		}
+	}
+	
+	option = { # nothing we can do
+		name = benelux.27.b
+		ai_chance = {
+			base = 90
+		}
+		diplomatic_relation = { country = BEL relation = guarantee active = no }
+		diplomatic_relation = { country = HOL relation = guarantee active = no }
+		diplomatic_relation = { country = LUX relation = guarantee active = no }
+		FRA = {
+			country_event = { id = benelux.29 days = 7 }
+		}
+		GER = {
+			country_event = { id = benelux.29 days = 7 }
+		}
+	}
+}
+
+# UK resists Franco-German plot
+country_event = {
+	id = benelux.28
+	title = benelux.28.t
+	desc = benelux.28.d
+	picture = GFX_uk_standin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.28.a
+		create_wargoal = {
+			type = annex_everything
+			target = BEL
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = HOL
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = LUX
+		}
+	}
+}
+
+# UK accepts Franco-German plot
+country_event = {
+	id = benelux.29
+	title = benelux.29.t
+	desc = benelux.29.d
+	picture = GFX_uk_standin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.29.a
+		set_global_flag = benelux_FRA_GER_partition
+	}
+}
+
+# Franco-German partition
+news_event = {
+	id = benelux.30
+	title = benelux.30.t
+	desc = benelux.30.d
+	picture = GFX_news_event_008
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = benelux_FRA_GER_partition
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	immediate = {
+		FRA = {
+			annex_country = { target = BEL }
+		}
+		GER = {
+			annex_country = { target = HOL }
+			annex_country = { target = LUX }
+		}
+	}
+	
+	option = {
+		name = benelux.30.a
+		trigger = { TAG = FRA }
+	}
+	option = {
+		name = benelux.30.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = benelux.30.c
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = benelux.30.e
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = FRA
+					TAG = GER
+					TAG = ENG
+				}
+			}
+		}
+	}
+}
+	
+# France: both Germany & UK side with us
+country_event = {
+	id = benelux.31
+	title = benelux.31.t
+	desc = benelux.31.d
+	picture = GFX_france_standin
+	
+	trigger = {
+		tag = FRA
+		ENG = { has_country_flag = benelux_pro_FRA }
+		GER = { has_country_flag = benelux_pro_FRA }
+		NOT = { has_global_flag = benelux_ENG_FRA_deal }
+		NOT = { has_global_flag = benelux_FRA_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # side with UK
+		name = benelux.31.a
+		ENG = {
+			country_event = { id = benelux.35 days = 7 }
+		}
+	}
+	
+	option = { # side with Germany
+		name = benelux.31.b
+		GER = {
+			country_event = { id = benelux.36 days = 7 }
+		}
+	}
+	
+	option = { # nah we're good
+		name = benelux.31.c
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# France: only UK sides with us
+country_event = {
+	id = benelux.32
+	title = benelux.32.t
+	desc = benelux.32.d
+	picture = GFX_france_standin
+	
+	trigger = {
+		tag = FRA
+		ENG = { has_country_flag = benelux_pro_FRA }
+		GER = { has_country_flag = benelux_anti_FRA }
+		NOT = { has_global_flag = benelux_ENG_FRA_deal }
+		NOT = { has_global_flag = benelux_FRA_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # side with UK
+		name = benelux.32.a
+		ENG = {
+			country_event = { id = benelux.35 days = 7 }
+		}
+	}
+	
+	option = { # nah we're good
+		name = benelux.32.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# France: only Germany sides with us
+country_event = {
+	id = benelux.33
+	title = benelux.33.t
+	desc = benelux.33.d
+	picture = GFX_france_standin
+	
+	trigger = {
+		tag = FRA
+		ENG = { has_country_flag = benelux_anti_FRA }
+		GER = { has_country_flag = benelux_pro_FRA }
+		NOT = { has_global_flag = benelux_ENG_FRA_deal }
+		NOT = { has_global_flag = benelux_FRA_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # side with Germany
+		name = benelux.33.a
+		GER = {
+			country_event = { id = benelux.36 days = 7 }
+		}
+	}
+	
+	option = { # nah we're good
+		name = benelux.33.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# France: no one sides with us
+country_event = {
+	id = benelux.34
+	title = benelux.34.t
+	desc = benelux.34.d
+	picture = GFX_france_standin
+	
+	trigger = {
+		tag = FRA
+		ENG = { has_country_flag = benelux_anti_FRA }
+		GER = { has_country_flag = benelux_anti_FRA }
+		NOT = { has_global_flag = benelux_ENG_FRA_deal }
+		NOT = { has_global_flag = benelux_FRA_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # boo hoo
+		name = benelux.34.a
+	}
+}
+
+# France offers to split Benelux with UK
+country_event = {
+	id = benelux.35
+	title = benelux.35.t
+	desc = benelux.35.d
+	picture = GFX_france_standin
+	
+	is_triggered_only = yes
+
+	option = { # let's do this
+		name = benelux.35.a
+		set_global_flag = benelux_ENG_FRA_deal
+		GER = {
+			country_event = { id = benelux.47 days = 7 }
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_global_flag = benelux_ENG_GER_deal
+			}
+		}
+	}
+	
+	option = { # nah
+		name = benelux.35.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = benelux_ENG_GER_deal }
+			}
+		}
+		FROM = {
+			country_event = { id = benelux.20 days = 7 }
+		}
+	}
+}
+
+# France offers to split Benelux with Germany
+country_event = {
+	id = benelux.36
+	title = benelux.36.t
+	desc = benelux.36.d
+	picture = GFX_france_standin
+	
+	is_triggered_only = yes
+
+	option = { # let's do this
+		name = benelux.36.a
+		set_global_flag = benelux_FRA_GER_deal
+		ENG = {
+			country_event = { id = benelux.27 days = 7 }
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_global_flag = benelux_ENG_GER_deal
+			}
+		}
+	}
+	
+	option = { # nah
+		name = benelux.36.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = benelux_ENG_GER_deal }
+			}
+		}
+		FROM = {
+			country_event = { id = benelux.20 days = 7 }
+		}
+	}
+}
+
+# France: Britain & Germany plot to partition Benelux
+country_event = {
+	id = benelux.37
+	title = benelux.37.t
+	desc = benelux.37.d
+	picture = GFX_france_standin
+	
+	is_triggered_only = yes
+	
+	option = { # oppose them
+		name = benelux.37.a
+		ai_chance = {
+			base = 10
+		}
+		give_guarantee = BEL
+		give_guarantee = HOL
+		give_guarantee = LUX
+		ENG = {
+			country_event = { id = benelux.38 days = 7 }
+		}
+		GER = {
+			country_event = { id = benelux.38 days = 7 }
+		}
+	}
+	
+	option = { # nothing we can do
+		name = benelux.37.b
+		ai_chance = {
+			base = 90
+		}
+		diplomatic_relation = { country = BEL relation = guarantee active = no }
+		diplomatic_relation = { country = HOL relation = guarantee active = no }
+		diplomatic_relation = { country = LUX relation = guarantee active = no }
+		ENG = {
+			country_event = { id = benelux.39 days = 7 }
+		}
+		GER = {
+			country_event = { id = benelux.39 days = 7 }
+		}
+	}
+}
+
+# France resists Anglo-German plot
+country_event = {
+	id = benelux.38
+	title = benelux.38.t
+	desc = benelux.38.d
+	picture = GFX_france_standin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.38.a
+		create_wargoal = {
+			type = annex_everything
+			target = BEL
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = HOL
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = LUX
+		}
+	}
+}
+
+# France accepts Anglo-German plot
+country_event = {
+	id = benelux.39
+	title = benelux.39.t
+	desc = benelux.39.d
+	picture = GFX_france_standin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.39.a
+		set_global_flag = benelux_ENG_GER_partition
+	}
+}
+
+# Anglo-German partition
+news_event = {
+	id = benelux.40
+	title = benelux.40.t
+	desc = benelux.40.d
+	picture = GFX_news_event_008
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = benelux_ENG_GER_partition
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	immediate = {
+		GER = {
+			transfer_state = 34
+		}
+		ENG = {
+			transfer_state = 7
+			annex_country = { target = BEL }
+		}
+		GER = {
+			annex_country = { target = HOL }
+			annex_country = { target = LUX }
+		}
+	}
+	
+	option = {
+		name = benelux.40.a
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = benelux.40.b
+		trigger = { TAG = FRA }
+	}
+	option = {
+		name = benelux.40.c
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = benelux.40.e
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = ENG
+					TAG = FRA
+					TAG = GER
+				}
+			}
+		}
+	}
+}
+
+# Germany: both France & UK side with us
+country_event = {
+	id = benelux.41
+	title = benelux.41.t
+	desc = benelux.41.d
+	picture = GFX_germany_standin
+	
+	trigger = {
+		tag = GER
+		ENG = { has_country_flag = benelux_pro_GER }
+		FRA = { has_country_flag = benelux_pro_GER }
+		NOT = { has_global_flag = benelux_ENG_GER_deal }
+		NOT = { has_global_flag = benelux_FRA_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # side with UK
+		name = benelux.41.a
+		ENG = {
+			country_event = { id = benelux.45 days = 7 }
+		}
+	}
+	
+	option = { # side with France
+		name = benelux.41.b
+		FRA = {
+			country_event = { id = benelux.46 days = 7 }
+		}
+	}
+	
+	option = { # nah we're good
+		name = benelux.41.c
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# Germany: only UK sides with us
+country_event = {
+	id = benelux.42
+	title = benelux.42.t
+	desc = benelux.42.d
+	picture = GFX_germany_standin
+	
+	trigger = {
+		tag = GER
+		ENG = { has_country_flag = benelux_pro_GER }
+		FRA = { has_country_flag = benelux_anti_GER }
+		NOT = { has_global_flag = benelux_ENG_GER_deal }
+		NOT = { has_global_flag = benelux_FRA_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # side with UK
+		name = benelux.42.a
+		ENG = {
+			country_event = { id = benelux.45 days = 7 }
+		}
+	}
+	
+	option = { # nah we're good
+		name = benelux.42.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# Germany: only France sides with us
+country_event = {
+	id = benelux.43
+	title = benelux.43.t
+	desc = benelux.43.d
+	picture = GFX_germany_standin
+	
+	trigger = {
+		tag = GER
+		ENG = { has_country_flag = benelux_anti_GER }
+		FRA = { has_country_flag = benelux_pro_GER }
+		NOT = { has_global_flag = benelux_ENG_GER_deal }
+		NOT = { has_global_flag = benelux_FRA_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # side with France
+		name = benelux.43.a
+		FRA = {
+			country_event = { id = benelux.46 days = 7 }
+		}
+	}
+	
+	option = { # nah we're good
+		name = benelux.43.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# Germany: no one sides with us
+country_event = {
+	id = benelux.44
+	title = benelux.44.t
+	desc = benelux.44.d
+	picture = GFX_germany_standin
+	
+	trigger = {
+		tag = GER
+		ENG = { has_country_flag = benelux_anti_GER }
+		FRA = { has_country_flag = benelux_anti_GER }
+		NOT = { has_global_flag = benelux_ENG_GER_deal }
+		NOT = { has_global_flag = benelux_FRA_GER_deal }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { # boo hoo
+		name = benelux.44.a
+	}
+}
+
+# Germany offers to split Benelux with UK
+country_event = {
+	id = benelux.45
+	title = benelux.45.t
+	desc = benelux.45.d
+	picture = GFX_germany_standin
+	
+	is_triggered_only = yes
+
+	option = { # let's do this
+		name = benelux.45.a
+		set_global_flag = benelux_ENG_GER_deal
+		FRA = {
+			country_event = { id = benelux.37 days = 7 }
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_global_flag = benelux_ENG_FRA_deal
+			}
+		}
+	}
+	
+	option = { # nah
+		name = benelux.45.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = benelux_ENG_FRA_deal }
+			}
+		}
+		FROM = {
+			country_event = { id = benelux.20 days = 7 }
+		}
+	}
+}
+
+# Germany offers to split Benelux with France
+country_event = {
+	id = benelux.46
+	title = benelux.46.t
+	desc = benelux.46.d
+	picture = GFX_germany_standin
+	
+	is_triggered_only = yes
+
+	option = { # let's do this
+		name = benelux.46.a
+		set_global_flag = benelux_FRA_GER_deal
+		ENG = {
+			country_event = { id = benelux.27 days = 7 }
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_global_flag = benelux_ENG_FRA_deal
+			}
+		}
+	}
+	
+	option = { # nah
+		name = benelux.46.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = benelux_ENG_FRA_deal }
+			}
+		}
+		FROM = {
+			country_event = { id = benelux.20 days = 7 }
+		}
+	}
+}
+
+# Germany: France & UK plot to partition Benelux
+country_event = {
+	id = benelux.47
+	title = benelux.47.t
+	desc = benelux.47.d
+	picture = GFX_germany_standin
+	
+	is_triggered_only = yes
+	
+	option = { # oppose them
+		name = benelux.47.a
+		ai_chance = {
+			base = 10
+		}
+		give_guarantee = BEL
+		give_guarantee = HOL
+		give_guarantee = LUX
+		FRA = {
+			country_event = { id = benelux.48 days = 7 }
+		}
+		ENG = {
+			country_event = { id = benelux.48 days = 7 }
+		}
+	}
+	
+	option = { # nothing we can do
+		name = benelux.47.b
+		ai_chance = {
+			base = 90
+		}
+		diplomatic_relation = { country = BEL relation = guarantee active = no }
+		diplomatic_relation = { country = HOL relation = guarantee active = no }
+		diplomatic_relation = { country = LUX relation = guarantee active = no }
+		FRA = {
+			country_event = { id = benelux.49 days = 7 }
+		}
+		ENG = {
+			country_event = { id = benelux.49 days = 7 }
+		}
+	}
+}
+
+# Germany resists Anglo-French plot
+country_event = {
+	id = benelux.48
+	title = benelux.48.t
+	desc = benelux.48.d
+	picture = GFX_germany_standin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.48.a
+		create_wargoal = {
+			type = annex_everything
+			target = BEL
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = HOL
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = LUX
+		}
+	}
+}
+
+# Germany accepts Anglo-French plot
+country_event = {
+	id = benelux.49
+	title = benelux.49.t
+	desc = benelux.49.d
+	picture = GFX_germany_standin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = benelux.49.a
+		set_global_flag = benelux_ENG_FRA_partition
+	}
+}
+
+# Anglo-French partition
+news_event = {
+	id = benelux.50
+	title = benelux.50.t
+	desc = benelux.50.d
+	picture = GFX_news_event_008
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = benelux_ENG_FRA_partition
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	immediate = {
+		FRA = {
+			annex_country = { target = BEL }
+			annex_country = { target = LUX }
+		}
+		ENG = {
+			annex_country = { target = HOL }
+		}
+	}
+	
+	option = {
+		name = benelux.50.a
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = benelux.50.b
+		trigger = { TAG = FRA }
+	}
+	option = {
+		name = benelux.50.c
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = benelux.50.e
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = ENG
+					TAG = FRA
+					TAG = GER
+				}
+			}
 		}
 	}
 }

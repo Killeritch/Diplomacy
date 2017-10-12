@@ -76,7 +76,7 @@ country_event = {
 	}
 }
 
-# Italian ultimatum to Tunisia
+# French/Italian ultimatum to Tunisia
 country_event = {
 	id = africa.2
 	title = africa.2.t
@@ -93,7 +93,7 @@ country_event = {
 				factor = 0				
 				any_other_country = {
 					is_major = yes
-					NOT = { tag = ITA }
+					NOT = { tag = FROM }
 					OR = {
 						has_guaranteed = TUN
 						is_in_faction_with = TUN
@@ -108,7 +108,7 @@ country_event = {
 				}
 			}
 		}
-		ITA = {
+		FROM = {
 			country_event = { days = 1 id = africa.6 }
 		}
 		
@@ -121,14 +121,14 @@ country_event = {
 				factor = 0
 				OR = {
 					AND = {
-						is_in_faction_with = ITA
-						ITA = { is_faction_leader = yes }
+						is_in_faction_with = FROM
+						FROM = { is_faction_leader = yes }
 					}
 					AND = {
 						is_in_faction = no 
 						NOT = {
 							any_other_country = {
-								NOT = { tag = ITA }
+								NOT = { tag = FROM }
 								has_guaranteed = TUN
 							} 
 						}
@@ -136,7 +136,7 @@ country_event = {
 				}
 			}
 		}
-		ITA = {
+		FROM = {
 			effect_tooltip = {
 				create_wargoal = {
 					type = annex_everything
@@ -148,7 +148,7 @@ country_event = {
 	}
 }
 
-# French/British ultimatum to Morocco
+# French/British/Italian ultimatum to Morocco
 country_event = {
 	id = africa.3
 	title = africa.3.t

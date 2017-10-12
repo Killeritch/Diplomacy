@@ -100,33 +100,6 @@ set_autonomy = {
 	autonomous_state =  autonomy_puppet
 }
 
-1939.1.1 = {
-	set_national_unity = 0.7
-
-	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 99
-			}
-
-			fascism = {
-				popularity = 0
-			}
-			
-			communism = {
-				popularity = 1
-				#banned = no #default is no
-			}
-		}
-		
-		ruling_party = democratic
-		last_election = "1936.11.3"
-		election_frequency = 48
-		elections_allowed = yes
-	}
-}
-
 create_country_leader = {
 	name = "Franklin Delano Roosevelt"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
@@ -134,7 +107,7 @@ create_country_leader = {
 	expire = "1947.1.1"
 	ideology = liberalism
 	traits = {
-		dislikes_germany
+		#
 	}
 }
 
