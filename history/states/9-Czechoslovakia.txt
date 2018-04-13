@@ -3,7 +3,7 @@ state={
 	name="STATE_9"
 	manpower = 4492600
 	resources={
-		steel=8
+		steel=5 # was: 8
 	}
 	
 	state_category = large_city
@@ -14,7 +14,7 @@ state={
 		victory_points = { 6418 5 }
 		buildings = {
 			infrastructure = 7
-			arms_factory = 1
+			arms_factory = 6
 			industrial_complex = 1
 			anti_air_building = 5
 			air_base = 5
@@ -25,6 +25,6 @@ state={
 	}
 
 	provinces={
-		445 494 543 583 3462 5283 6418 6440 6592 7857 9414 9421 9429 9541 9569 11542 11556 
+		445 494 583 3462 6418 6440 6592 9414 9421 9429 9541 9569 11542 11556 
 	}
 }

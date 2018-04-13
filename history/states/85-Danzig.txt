@@ -11,6 +11,7 @@ state={
 		}
 		buildings = {
 			infrastructure = 6
+			arms_factory = 2
 			industrial_complex = 1
 			dockyard = 1
 			air_base = 3
@@ -23,7 +24,6 @@ state={
 	}
 
 	provinces={
-		279 334 362 389 3295 3324 9263 
-		6347 #from Mazurskie (Plock) - I think maybe the Russian-German looks slightly better this way?
+		243 279 334 362 389 3295 3324 6347 9263
 	}
 }

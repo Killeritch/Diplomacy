@@ -46,4 +46,4 @@ set_politics = {
 }
 
 set_convoys = 150
-set_national_unity = 0.9
+set_stability = 0.9

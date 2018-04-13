@@ -9,14 +9,12 @@ state={
 	history={
 		owner = SOV
 		victory_points = {
-			3320 5
-		}
-		victory_points = {
-			6296 1
+			6296 5
 		}
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 1
+			arms_factory = 1
+			industrial_complex = 3
 			air_base = 4
 		}
 		add_core_of = SOV
@@ -24,6 +22,6 @@ state={
 	}
 
 	provinces={
-		327 3272 3320 6281 6296 6407 9246 9295 9357 9374 9404 9438 11226 11312 11498 
+		327 3272 6281 6296 6407 9246 9357 9374 9404 9438 11226 11312 11498 
 	}
 }
